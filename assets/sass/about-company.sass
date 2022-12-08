@@ -1,0 +1,164 @@
+.about-company
+    padding-top: 83px
+
+    & > .contacts__banner
+        @media screen and (min-width: $desktopS)
+            margin-top: 60px
+
+    &__text
+        @media screen and (max-width: $mobileM)
+            margin: 60px 0
+        @media screen and (min-width: $mobileM)
+            margin: 64px 0
+        @media screen and (min-width: $tabletS)
+            margin: 80px 0
+        @media screen and (min-width: $desktopS)
+            margin: 100px 0
+        @media screen and (min-width: $desktopM)
+            margin: 120px 0
+
+        & .container
+            max-width: 1115px
+            margin: 0 auto
+            @media screen and (max-width: $desktopXS)
+                max-width: 96vw
+
+        & h3
+            margin: 0 auto
+            max-width: 1115px
+            color: $orange
+            font-family: "Montserrat Alternates", sans-serif
+            @media screen and (min-width: 0)
+                margin: 20px 0 12px
+            @media screen and (min-width: $tabletS)
+                margin: 24px 0 14px
+            @media screen and (min-width: $desktopS)
+                margin: 28px 0 15px
+
+        & p
+            line-height: 160%
+            letter-spacing: 0.04em
+            margin-bottom: 15px
+            @media screen and (min-width: 0)
+                font-size: 14px
+            @media screen and (min-width: $tabletS)
+                font-size: 16px
+
+        & ul
+            & > li
+                display: flex
+                align-items: center
+                margin-bottom: 8px
+                grid-gap: 12px
+
+                &::before
+                    content: url("../img/marker.svg")
+
+                & > p
+                    margin-bottom: 0
+
+    & .reviews
+        background: $background-grey-gradient
+
+.managers
+    margin-top: 150px
+    background: $orange
+    @media screen and (max-width: $mobileM)
+        padding: 60px 0
+        margin-top: 60px
+
+        & > .container
+            width: 100vw
+    @media screen and (min-width: $mobileM)
+        padding: 64px 0
+        & > .container
+            width: 100vw
+    @media screen and (min-width: $tabletS)
+        padding: 80px 0
+        & > .container
+            width: 100vw
+    @media screen and (min-width: $desktopS)
+        padding: 100px 0
+        & > .container
+            width: 1200px
+    @media screen and (min-width: $desktopM)
+        padding: 120px 0
+        & > .container
+            width: 1345px
+
+    & h2
+        color: $white
+        text-align: left
+        @media screen and (min-width: 0)
+            margin-left: 30px
+        @media screen and (min-width: $mobileM)
+            margin-left: 32px
+        @media screen and (min-width: $mobileL)
+            margin-left: 40px
+        @media screen and (min-width: $tabletS)
+            margin-left: 56px
+        @media screen and (min-width: $desktopS)
+            margin-left: 0
+
+    &-slider
+        @media screen and (min-width: 0)
+            margin-left: 30px
+        @media screen and (min-width: $mobileM)
+            margin-left: 32px
+        @media screen and (min-width: $mobileL)
+            margin-left: 40px
+        @media screen and (min-width: $tabletS)
+            margin-left: 56px
+        @media screen and (min-width: $desktopS)
+            margin-left: 0
+
+    & .arrow
+        display: flex
+        align-items: center
+        cursor: pointer
+        position: absolute
+        bottom: -50px
+        margin: 0
+
+        img
+            display: block
+
+    & .arrow-prev
+        z-index: 1000
+        position: absolute
+        left: 20px
+
+    & .arrow-next
+        z-index: 1000
+        position: absolute
+        right: 20px
+
+    &__card
+        & > h3
+            color: $white
+            font-family: "Montserrat Alternates", sans-serif
+            @media screen and (min-width: 0)
+                margin: 20px 0 8px
+            @media screen and (min-width: $desktopS)
+                margin: 20px 0 10px
+            @media screen and (min-width: $desktopM)
+                margin: 24px 0 10px
+
+        & > p
+            font-size: 12px
+            line-height: 14px
+            letter-spacing: 0.045em
+            color: $white
+
+        &__img
+            & > img
+                border-radius: 15px
+                @media screen and (min-width: 0)
+                    width: 260px
+                    height: 310px
+                @media screen and (min-width: $tabletS)
+                    width: 274px
+                    height: 327px
+                @media screen and (min-width: $desktopM)
+                    width: 310px
+                    height: 370px

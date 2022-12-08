@@ -1,0 +1,120 @@
+.delivery
+    position: relative
+    padding-top: 83px
+    overflow: hidden
+
+    & > *
+        position: relative
+        z-index: 10
+
+    & .back
+        position: absolute
+        right: 0
+        bottom: -122px
+        z-index: 0
+
+    &__step
+        margin-bottom: 60px
+
+        &-head
+            display: grid
+            grid-template-columns: 127px 1fr
+            gap: 30px
+            margin-bottom: 25px
+            @media screen and (max-width: $desktopXS)
+                grid-template-columns: 90px 1fr
+            @media screen and (max-width: $mobileM)
+                grid-template-columns: 60px 1fr
+
+        &.step5
+            .table-wrapper
+                background-color: $white
+
+    &__title
+        font-size: 20px
+        color: $orange
+        margin-bottom: 0
+
+    &__description
+        margin-bottom: 30px
+        font-size: 14px
+        line-height: 1.4
+
+    table
+        //border: 2px solid #333
+        border-spacing: 0
+        border-collapse: collapse
+        width: 100%
+        overflow-y: auto
+
+        .no-right
+            border-right: 0
+
+        thead
+            font-weight: bold
+            font-size: 19px
+            color: $orange
+            font-family: "Montserrat Alternates", sans-serif
+
+            td
+                line-height: 1.4
+                font-size: 17px
+                padding: 10px 5px
+                text-align: center
+                border-right: 1px solid #aaa
+                border-bottom: 2px solid $orange !important
+
+                &:first-child
+                    border-right: 2px solid $orange
+
+                &:last-child
+                    border-right: none
+
+        tbody td
+            line-height: 1.4
+            font-size: 17px
+            border: 1px solid #aaa
+            padding: 10px 5px
+            text-align: center
+
+            &:first-child
+                border-right: 2px solid $orange
+                border-left: none
+
+            &:last-child
+                border-right: none
+
+        tbody tr:last-child
+            td
+                border-bottom: none
+
+    .table-to-hide
+        max-height: 350px
+        overflow: hidden
+        transition: .3s
+
+        &.open
+            max-height: 2000px
+
+            & + .table-hide
+                display: none
+
+    .table-hide
+        height: 90px
+        margin-top: -90px
+        width: 100%
+        position: relative
+
+        background: linear-gradient(#fff0, #ffff 80%, #ffff 100%)
+
+    .table-switcher
+        margin-top: 15px
+        padding: 13px 20px
+        width: fit-content
+        cursor: pointer
+
+    .table-wrapper
+        overflow: hidden
+        border-radius: 15px
+        border: 2px solid $black
+//padding-bottom: 15px

@@ -1,0 +1,34 @@
+.auctions-table 
+    position: relative
+    h2, .h2
+        margin-bottom: 10px
+    &__subtitle
+        font-size: 16px
+        text-align: center
+        margin-bottom: 30px
+
+    &__wrap
+        padding-bottom: 8px
+        max-width: 100%
+        width: 100%
+        overflow: auto
+        scrollbar-width: thin
+
+    table
+        border-left: none
+
+    td
+        padding: 10px
+
+    thead tr th:first-child
+        background-color: #e6e6e6
+    th 
+        background-color: #f3f3f3
+    tr:nth-child(2n) th 
+        background-color: #e6e6e6
+
+    tbody tr th, tr:first-child th:first-child 
+        left: 0px
+        z-index: 12
+        position: -webkit-sticky
+        position: sticky

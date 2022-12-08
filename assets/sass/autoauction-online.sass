@@ -1,0 +1,1190 @@
+.not-visible
+    display: none !important
+
+.pre-filter-brands
+    display: flex
+    justify-content: space-between
+    max-width: 100%
+    overflow-x: auto
+    gap: 30px
+    padding-bottom: 20px
+    margin-bottom: -20px
+    align-items: center
+
+.pre-filter-brand
+    width: 80px
+    flex-shrink: 0
+
+img
+    width: 100%
+
+.main-filter
+    margin-top: 60px
+    @media screen and (max-width: $desktopS)
+        margin-top: 50px
+    @media screen and (max-width: $mobileL)
+        margin-top: 20px
+
+    .choices__inner
+        background: none
+        border: none
+        border-radius: 0
+        border-bottom: 1px solid $black-21
+
+        .choices__item
+            font-size: 17px !important
+            line-height: 17px !important
+
+    #main-filter__select
+        &:focus-visible
+            outline: none
+
+    &__category
+        // border: 1px solid $grey-153
+
+        width: inherit
+        display: grid
+        padding: 12px 0 15px !important
+        place-items: center
+        transition: .3s
+        border-bottom: none !important
+        border-radius: 10px 10px 0 0
+        font-size: 18px !important
+        border: 1px solid $black-op20
+        background: $black
+        color: $black-op50
+
+        &:hover
+            border: 1px solid $black-op75
+            color: $black-op75
+            // padding: 8px 0 19px !important
+            box-shadow: 0 -12px 12px rgba(0, 0, 0, .03)
+        // padding: 20px 0 20px !important
+
+        &.active
+            border: 1px solid $black-op75
+            color: $black-op75
+            background: white
+            margin-top: -5px
+            padding-bottom: 20px !important
+    // background: $red-dark
+    // color: white
+    // &:hover
+        // padding: 15px 0 17px !important
+
+    &__categories
+        &-tabs
+            // margin-bottom: 25px
+            gap: 10px
+            justify-content: space-between
+            width: 100% !important
+            display: none
+            @media screen and (min-width: $tabletS)
+                display: flex
+
+        &-select
+            @media screen and (min-width: 0)
+                margin-bottom: 25px
+            @media screen and (min-width: $mobileL)
+                margin-bottom: 25px
+            @media screen and (min-width: $tabletS)
+                margin-bottom: 28px
+                display: none
+
+    &__lists
+        position: relative
+        padding: 20px 20px 15px
+        box-shadow: 0 10px 10px rgba(0, 0, 0, .2)
+        border-radius: 0 0 5px 5px
+        position: relative
+        border-left: 1px solid $black-op20
+        border-right: 1px solid $black-op20
+        border-left: 1px solid $black-op20
+
+        // border: 1px solid $black-21
+        display: grid
+
+        &-more
+            display: none
+
+        @media screen and (max-width: $mobileL)
+
+            max-height: 260px
+            overflow-y: hidden
+            padding-bottom: 40px
+            transition: .3s
+            position: relative
+            &-more
+                width: 98%
+                position: absolute
+                bottom: 0
+
+                display: grid
+                place-items: center
+                padding: 6px 6px 10px
+                background: white
+                margin: 0 1% 0
+
+                .more, .less
+                    cursor: pointer
+                    padding: 10px 15px
+                    background: $orange
+                    color: white
+                    border-radius: 5px
+
+                .less
+                    display: none
+
+                .more
+                    display: block
+
+            ul
+                max-height: 100%
+                overflow: hidden
+            &.open
+                max-height: 900px
+
+                .more
+                    display: none
+
+                .less
+                    display: block
+
+        @media screen and (min-width: 0)
+            margin-bottom: 40px
+        @media screen and (min-width: $tabletS)
+            margin-bottom: 48px
+        @media screen and (max-width: $desktopS)
+            margin-bottom: 40px
+            padding: 20px
+            box-shadow: 0 6px 12px rgba(0, 0, 0, .2)
+
+        @media screen and (min-width: $desktopS)
+            // grid-template-columns: 120px 135px 120px 120px 153px 120px 166px
+            column-gap: 68px
+
+        & > ul
+            @media screen and (min-width: 0)
+                display: none
+                &.active
+                    max-width: 100% !important
+                    margin: 0 auto
+                    display: flex
+                    flex-direction: column
+                    // flex-wrap: wrap
+                    // display: grid
+                    grid-gap: 24px
+                    justify-content: space-between
+
+            @media screen and (min-width: $mobileS)
+                &.active
+                    width: 100%
+                    margin: 0 auto
+                    // display: grid
+                    // grid-auto-flow: column
+                    // grid-template-columns: 1fr 1fr
+                    // grid-template-rows: 1fr 1fr 1fr 1fr 1fr
+                    row-gap: 24px
+            @media screen and (min-width: $mobileL)
+                &.active
+                    max-height: unset
+                    // width: 488px
+                    display: grid
+                    grid-auto-flow: column
+                    grid-template-columns: 1fr 1fr
+                    grid-auto-flow: unset !important
+            // grid-template-rows: 1fr 1fr 1fr 1fr 1fr
+            @media screen and (min-width: $tabletS)
+                &.active
+                    // width: 656px
+                    // justify-content: start
+                    // display: grid
+                    // grid-template-columns: auto
+                    grid-template-columns: 1fr 1fr 1fr
+                    column-gap: 113px
+                    row-gap: 24px
+            @media screen and (min-width: $tabletM)
+                &.active
+                    // width: 656px
+                    // justify-content: start
+                    // display: grid
+                    // grid-template-columns: auto
+                    grid-template-columns: 1fr 1fr 1fr 1fr
+                    column-gap: 113px
+                    row-gap: 24px
+            @media screen and (min-width: $desktopS)
+                &.active
+                    display: flex
+                    justify-content: start
+                    flex-direction: row
+                    flex-wrap: wrap
+
+                    gap: 15px
+                    width: 100%
+
+            //     display: block
+            //     &.active
+            //         display: block
+            //         width: auto
+
+            & > li
+                letter-spacing: 0.045em
+                @media screen and (min-width: 0)
+                    font-size: 14px
+                    line-height: 16px
+                @media screen and (min-width: $desktopS)
+                    margin-bottom: 14px
+                    font-size: 13px
+                    line-height: 15px
+
+                & > a
+                    color: black
+                    text-decoration: none
+                    position: relative
+                    white-space: nowrap
+                    @media screen and (max-width: $tabletS)
+                        position: static
+
+                    .auctions__notes
+                        position: static
+                        display: inline-block
+                        padding: 0 !important
+
+                    .auctions__notes-item
+                        padding: 0 0 0 2px !important
+
+                    .auctions__notes-text
+                        bottom: 27px !important
+                        right: -90px !important
+                        white-space: normal
+                        z-index: 111
+                        @media screen and (max-width: $tabletS)
+                            right: 20px !important
+                            bottom: unset !important
+                            margin-bottom: 80px
+
+                    &:hover
+                        text-decoration: underline
+
+    &__filter
+        background-color: $orange
+        color: $white
+        padding: 10px
+        border-radius: 15px
+
+        @media screen and (min-width: 0)
+            display: none
+            width: 100vw
+            input[type="text"], input[type="date"]
+                &::-webkit-calendar-picker-indicator
+                    filter: invert(1)
+
+                &::-webkit-input-placeholder
+                    color: $white
+
+                &::-moz-placeholder
+                    color: $white
+
+        @media screen and (min-width: $tabletM)
+            display: block
+            box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2)
+            margin-bottom: 50px
+            width: 100%
+
+        @media screen and (max-width: $tabletM)
+
+            min-height: 100vh
+        @media screen and (min-width: $tabletS)
+
+            input[type="text"], input[type="date"]
+                padding-top: 16px !important
+                align-self: end
+                color: $white
+
+                &::-webkit-calendar-picker-indicator
+                    filter: invert(1)
+
+                &::-webkit-input-placeholder
+                    color: $white
+
+                &::-moz-placeholder
+                    color: $white
+
+
+        @media screen and (min-width: 1250px)
+            display: grid
+            grid-template-columns: 2fr 0.5fr
+
+        & .h2
+            font-size: 32px
+            color: $white
+            grid-column: 1/3
+            margin: 20px 0
+
+        &.active
+            display: block !important
+            position: absolute
+            z-index: 10000
+            top: 0
+            left: 0
+
+        .choices__list--dropdown
+            .choices__item[data-value="placeholder"]
+                display: none
+
+        .choices
+            margin: 0
+
+        .choices[data-type*=select-one]::after
+            border-top-color: $white
+            border-bottom-color: transparent
+
+        .choices[data-type*=select-one].is-open::after
+            border-bottom-color: $white
+            border-top-color: transparent
+
+        .filter
+            &__top
+                width: 100%
+                display: flex
+                justify-content: space-between
+                grid-column: 1/3
+                @media screen and (min-width: 0)
+                    padding: 21px 30px
+                @media screen and (min-width: $mobileM)
+                    padding: 24px 32px
+                @media screen and (min-width: $mobileL)
+                    padding: 20px 40px
+                @media screen and (min-width: $tabletS)
+                    padding: 28px 56px
+                @media screen and (min-width: $tabletM)
+                    display: none
+
+                & > h2
+                    text-align: left
+                    margin: 0
+
+                & > button
+                    background: none
+                    border: none
+
+                    svg path
+                        fill: $white
+
+            &__left
+                @media screen and (min-width: 0)
+                    padding: 50px 30px 0
+                //border-bottom: 1px solid rgba(21, 2, 2, 0.06)
+                @media screen and (min-width: $mobileM)
+                    padding: 52px 32px 0
+                @media screen and (min-width: $mobileL)
+                    padding: 52px 40px 0
+                @media screen and (min-width: $tabletS)
+                    display: grid
+                    grid-template-columns: 1fr 1fr
+                    //grid-template-rows: 1fr 1fr 1fr 1fr 1fr
+                    padding: 0
+
+                & > div
+
+                    @media screen and (min-width: 0)
+                        margin-bottom: 50px
+                    @media screen and (min-width: $mobileM)
+                        margin-bottom: 52px
+                    @media screen and (min-width: $tabletS)
+                        margin-bottom: 0
+                        padding: 15px 35px 21px
+                    //border-bottom: 1px solid rgba(21, 2, 2, 0.06)
+                    // @media screen and (min-width: $tabletM)
+                        // padding: 50px 74px
+                    @media screen and (min-width: 1250px)
+                        padding: 15px 53px 21px !important
+                        height: fit-content
+
+                    & > label
+                        display: block
+                        font-size: 20px
+                        line-height: 23px
+                        letter-spacing: 0.03em
+                        margin-bottom: 15px
+
+            &__right
+                display: flex
+                align-items: center
+                justify-content: center
+
+                & .white-btn
+                    padding: 12px 40px
+                    font-size: 22px
+                    line-height: 25px
+
+            &__rating
+                width: 100%
+                @media screen and (min-width: 0)
+                    border-bottom: 1px solid rgba(21, 2, 2, 0.06)
+                @media screen and (min-width: $tabletS)
+                    border-bottom: none
+
+                .h3
+                    margin-top: 15px
+                    margin-bottom: 10px
+
+                &-range
+                    width: 100%
+
+                &-values
+                    display: flex
+                    justify-content: space-between
+                    gap: 15px
+                    align-items: center
+
+                    margin-top: 0 !important
+
+                &-value
+                    font-size: 12px
+                    color: $black-op50
+
+                .noUi-horizontal
+                    height: 5px
+
+                .noUi-connect
+                    background: $blue
+                //left: 5px
+
+                .noUi-handle
+                    height: 15px
+                    width: 15px
+                    // border-radius: 50%
+                    background: $blue
+                    border: none
+                    box-shadow: none
+
+                    &::before, &::after
+                        display: none
+
+                //.noUi-connect,
+                //.noUi-origin
+                    margin-right: 10px
+
+                &__content
+                    display: flex
+                    flex-wrap: wrap
+                    @media screen and (min-width: 0)
+                        max-width: 300px
+                        column-gap: 35px
+                        row-gap: 22px
+                    @media screen and (min-width: $mobileM)
+                        max-width: 332px
+                        column-gap: 42px
+                        row-gap: 24px
+                    @media screen and (min-width: $mobileL)
+                        max-width: 480px
+                    @media screen and (min-width: $tabletS)
+                        max-width: 294px
+                        column-gap: 32px
+                    @media screen and (min-width: 1250px)
+                        max-width: 270px
+                        column-gap: 23px
+                        row-gap: 15px
+                    @media screen and (min-width: $desktopM)
+                        max-width: 305px
+
+                &__checkbox
+                    display: flex
+                    align-items: center
+                    width: 45px
+
+                & input[type=checkbox]
+                    display: none
+
+                    &:checked + label
+                        background-color: $blue
+                        background-image: url("../img/autoauction-online/checkmark.svg")
+                        background-repeat: no-repeat
+                        background-position: center
+
+                    & + label
+                        display: inline-block
+                        margin-right: 6px
+                        width: 16px
+                        height: 16px
+                        border: 1px solid $grey-179
+                        box-sizing: border-box
+
+                        & + label
+                            font-size: 12px
+                            line-height: 14px
+
+            &__color
+                @media screen and (min-width: 0)
+                    border-bottom: 1px solid rgba(21, 2, 2, 0.06)
+                @media screen and (min-width: $tabletS)
+                    border-bottom: none
+
+                &__content
+                    display: flex
+                    flex-wrap: wrap
+                    @media screen and (min-width: 0)
+                        max-width: 300px
+                        grid-gap: 20px
+                    @media screen and (min-width: $mobileM)
+                        max-width: 332px
+                        column-gap: 28px
+                        row-gap: 24px
+                    @media screen and (min-width: $mobileL)
+                        max-width: 480px
+                        column-gap: 32px
+                        row-gap: 20px
+                    @media screen and (min-width: $tabletS)
+                        max-width: 292px
+                        grid-gap: 20px
+                    @media screen and (min-width: 1250px)
+                        max-width: 270px
+                        column-gap: 16px
+                        row-gap: 12px
+                    @media screen and (min-width: $desktopM)
+                        max-width: 305px
+
+                &__checkbox
+                    & input[type=checkbox]
+                        display: none
+
+                        &:checked + label
+                            background-image: url("../img/autoauction-online/checkmark.svg")
+                            background-repeat: no-repeat
+                            background-position: center
+
+                        & + label
+                            display: block
+                            border: 1px solid $grey-229
+                            border-radius: 50%
+                            @media screen and (min-width: 0)
+                                width: 32px
+                                height: 32px
+                            @media screen and (min-width: 1250px)
+                                width: 24px
+                                height: 24px
+
+                    &:nth-child(1)
+                        & label
+                            background-color: $white
+
+                        & input:checked + label
+                            background-color: #C4C4C4
+
+                    &:nth-child(2)
+                        & label
+                            background: linear-gradient(180deg, #C4C4C4 0%, #F4F4F4 92.19%)
+
+                        & input:checked + label
+                            background-color: #C4C4C4
+
+                    &:nth-child(3)
+                        & label
+                            background-color: rgba(156, 156, 156, 1)
+
+                    &:nth-child(4)
+                        & label
+                            background-color: black
+
+                    &:nth-child(5)
+                        & label
+                            background-color: rgba(150, 75, 0, 1)
+
+                    &:nth-child(6)
+                        & label
+                            background: linear-gradient(180deg, #F4BF00 0%, #FFD700 100%)
+
+                    &:nth-child(7)
+                        & label
+                            background-color: rgba(244, 230, 208, 1)
+
+                    &:nth-child(8)
+                        & label
+                            background-color: rgba(255, 0, 0, 1)
+
+                    &:nth-child(9)
+                        & label
+                            background-color: rgba(255, 127, 9, 1)
+
+                    &:nth-child(10)
+                        & label
+                            background-color: rgba(249, 240, 34, 1)
+
+                    &:nth-child(11)
+                        & label
+                            background-color: rgba(0, 174, 0, 1)
+
+                    &:nth-child(12)
+                        & label
+                            background-color: rgba(36, 202, 255, 1)
+
+                    &:nth-child(13)
+                        & label
+                            background-color: rgba(1, 26, 248, 1)
+
+                    &:nth-child(14)
+                        & label
+                            background-color: rgba(158, 0, 255, 1)
+
+                    &:nth-child(15)
+                        & label
+                            background-color: rgba(212, 0, 191, 1)
+
+                    &:nth-child(16)
+                        & label
+                            background-color: rgba(255, 206, 230, 1)
+
+            &__left,
+            &__right
+                & select,
+                & .choices__inner,
+                & input
+                    padding-bottom: 13px
+                    border: none
+                    border-radius: 0
+                    border-bottom: 1px solid $white
+                    background: $orange
+                    color: $white
+                    @media screen and (min-width: 0)
+                        font-size: 16px
+                        line-height: 19px
+                    @media screen and (min-width: $tabletS)
+                        font-size: 15px
+                        line-height: 18px
+                    @media screen and (min-width: $desktopS)
+                        font-size: 20px
+                        line-height: 23px
+
+                & select
+                    appearance: none
+                    background: url('../img/select-arrow.svg') no-repeat right
+
+                & > div
+                    & > select,
+                    & .choices__inner,
+                    & .choices,
+                    & > input
+                        @media screen and (min-width: 0)
+                            width: 81vw
+                        @media screen and (min-width: $mobileS)
+                            width: 100%
+
+                        &::-webkit-input-placeholder
+                            color: $white
+
+                        &::-moz-placeholder
+                            color: $white
+
+                    .filter__selects
+                        display: flex
+                        grid-gap: 35px
+
+                        & > *
+                            max-width: calc(50% - 18px)
+
+                            *
+                                max-width: 100%
+
+                        & > select,
+                        & .choices__inner,
+                        & .choices
+                            @media screen and (min-width: 0)
+                                width: 100%
+                                //     width: 140px
+                                font-size: 16px
+                                line-height: 19px
+                            @media screen and (min-width: $tabletS)
+                                font-size: 15px
+                                line-height: 18px
+                        // @media screen and (min-width: $mobileM)
+                        //     width: 165px
+                        // @media screen and (min-width: $mobileL)
+                        //     width: 234px
+                        // @media screen and (min-width: $tabletS)
+                        //     width: 135px
+
+                        & .choices__item
+                            padding-right: 10px
+
+                            &:after
+                                display: none
+
+            &__buttons
+                align-self: end
+                align-items: center
+                justify-content: space-between
+                gap: 10px 5px
+                margin-top: 15px !important
+                @media screen and (min-width: 0)
+                    display: flex !important
+                    // flex-direction: column
+                    align-items: center
+                    flex-wrap: wrap
+                @media screen and (min-width: $tabletS)
+                // justify-content: space-between
+                @media screen and (min-width: $tabletM)
+                    display: flex
+                    flex-direction: row
+                // justify-content: center
+
+                & > button
+                    display: flex
+                    align-items: center
+                    grid-gap: 8px
+                    font-size: 15px
+                    line-height: 18px
+                    letter-spacing: 0.04em
+                    border: none
+                    font-family: Roboto
+
+                & > .clear-btn
+                    background: none
+                    color: $grey-181
+                    @media screen and (min-width: 0)
+                    // margin-bottom: 20px
+                    @media screen and (min-width: $tabletM)
+                        margin-right: 0
+                // margin-bottom: 18px
+
+                & > .red-btn
+                    width: 100%
+                    margin-bottom: 15px
+                    text-align: center
+                    @media screen and (min-width: 0)
+                        padding: 13px 68px
+                    @media screen and (min-width: $mobileM)
+                        padding: 16px 88px
+                    @media screen and (min-width: $mobileL)
+                        padding: 16px 157px
+                    @media screen and (min-width: $tabletS)
+                        padding: 16px 125px
+                    @media screen and (min-width: $tabletM)
+                        padding: 13px 89px
+                    @media screen and (min-width: 1250px)
+                        padding: 13px 55px
+                    @media screen and (min-width: $desktopM)
+                        padding: 13px 69px
+
+        & .all-btn
+            grid-column: 1/3
+            background: none
+            margin-bottom: 0
+            border: none
+            font-size: 24px
+            line-height: 29px
+            color: $white
+            font-family: Montserrat, sans-serif
+            @media screen and (min-width: 0)
+                display: block
+                margin: 10px auto
+            @media screen and (min-width: $tabletS)
+                margin: 15px auto
+            @media screen and (min-width: $desktopS)
+                margin: 20px 0
+
+
+            & > svg
+                margin-left: 20px
+                transform: rotate(180deg)
+
+                &.closed
+                    transform: none
+
+        & .choices__list--dropdown
+            color: $black !important
+
+        & .choices__input
+            color: $black !important
+
+        &-mobile
+            display: block
+            background: white
+            box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2)
+            @media screen and (min-width: 0)
+                padding: 14px 20px 20px
+                margin-bottom: 60px
+            @media screen and (min-width: $mobileM)
+                margin-bottom: 64px
+            @media screen and (min-width: $mobileL)
+                padding: 24px
+            @media screen and (min-width: $tabletS)
+                padding: 28px
+                margin-bottom: 80px
+            @media screen and (min-width: $tabletM)
+                display: none
+
+            &-top
+                display: flex
+                justify-content: space-between
+                gap: 10px
+                place-items: center
+
+                & > h2
+                    margin-bottom: 0
+
+                @media screen and (min-width: 0)
+                    margin-bottom: 20px
+                    flex-direction: column
+                    align-items: center
+                @media screen and (min-width: $mobileS)
+                    // flex-direction: row
+                    margin-bottom: 24px
+                @media screen and (min-width: $mobileL)
+                    flex-direction: row
+                    margin-bottom: 24px
+
+                @media screen and (min-width: $tabletS)
+                    margin-bottom: 28px
+
+                & > .red-btn
+                    display: flex
+                    align-items: center
+                    letter-spacing: 0.045em
+                    grid-gap: 16px
+                    @media screen and (min-width: 0)
+                        padding: 16px 25px
+                        font-size: 14px
+                        line-height: 17px
+                        margin-bottom: 10px
+                    @media screen and (min-width: $mobileS)
+                        margin-bottom: 0
+                    @media screen and (min-width: $mobileM)
+                        padding: 18px 28px
+                    @media screen and (min-width: $mobileL)
+                        padding: 18px 62px
+                        font-size: 16px
+                        line-height: 20px
+                    @media screen and (min-width: $tabletS)
+                        padding: 19px 89px
+                        font-size: 18px
+                        line-height: 22px
+
+                    & > svg
+                        @media screen and (min-width: 0)
+                            width: 22px
+                            height: 22px
+                        @media screen and (min-width: $mobileL)
+                            width: 24px
+                            height: 24px
+                        @media screen and (min-width: $tabletS)
+                            width: 28px
+                            height: 28px
+
+                & > p
+                    // text-align: right
+                    @media screen and (min-width: 0)
+                        font-size: 14px
+                        line-height: 16px
+                    @media screen and (min-width: $mobileM)
+                    // max-width: 108px
+                    @media screen and (min-width: $mobileL)
+                        text-align: right
+
+                        font-size: 16px
+                        line-height: 18px
+                    // max-width: 200px
+
+                    & > span
+                        font-weight: 700
+
+            &-tabs
+                display: flex
+                flex-wrap: wrap
+                grid-gap: 8px
+
+                & > .tab-active
+                    display: flex
+                    align-items: center
+                    grid-gap: 8px
+                    color: $blue
+                    border: 1px solid $blue
+                    border-radius: 100px
+                    @media screen and (min-width: 0)
+                        padding: 8px 14px
+                    @media screen and (min-width: $mobileM)
+                        padding: 8px 16px
+                    @media screen and (min-width: $mobileL)
+                        padding: 8px 20px
+                    @media screen and (min-width: $tabletS)
+                        padding: 12px 24px
+
+    &__mods
+        box-shadow: 0 3px 20px rgba(0, 0, 0, .2)
+        padding: 20px 25px
+        margin-bottom: 30px
+
+        @media screen and (min-width: $mobileL)
+            margin-bottom: 50px
+
+        .h2
+            font-size: 19px
+            font-weight: 600
+            margin-bottom: 15px
+            text-align: center
+
+        &-list
+            display: grid
+            grid-template-columns: repeat(8, 1fr)
+            position: relative
+            gap: 10px
+            height: 50px
+            overflow: hidden
+            @media screen and (max-width: $tabletM)
+                grid-template-columns: repeat(6, 1fr)
+
+            @media screen and (max-width: $tabletS)
+                grid-template-columns: repeat(4, 1fr)
+
+            @media screen and (max-width: $mobileL)
+                grid-template-columns: repeat(2, 1fr)
+
+            &.active
+                height: unset
+
+        &-show
+            text-align: center
+            cursor: pointer
+            color: $black-op50
+            padding-top: 15px
+
+            .hide
+                display: none
+
+            &.active
+                .show
+                    display: none
+
+                .hide
+                    display: inline-block
+
+.auctions picture img
+    max-height: 270px
+    min-height: 270px
+    height: 270px
+    object-fit: cover
+
+    @media screen and (max-width: $mobileM)
+        max-height: 230px
+        min-height: 230px
+        height: 230px
+
+.autoauction-online
+    overflow: hidden
+    padding-top: 83px
+
+    .page-title
+        @media screen and (max-width: $mobileL)
+            font-size: 21px
+            margin-bottom: 15px
+
+    .pre-auction
+        .container
+            display: flex
+            justify-content: space-between
+
+        &__count
+            & .count
+                &__number
+                    font-weight: 700
+                    color: $grey-128
+
+                &__desc
+                    color: $grey-181
+
+        &__filter
+            & .choices
+                min-width: 195px
+
+                &__inner
+                    background-color: $orange
+                    color: $white
+
+                &[data-type*=select-one]::after
+                    border-top-color: $white
+                    border-bottom-color: transparent
+
+                &[data-type*=select-one].is-open::after
+                    border-bottom-color: $white
+                    border-top-color: transparent
+
+
+    & .auction
+        background-color: white
+        color: $blue
+        margin: 0 auto
+
+        &-first
+            padding-top: 0
+
+        &__content
+            padding: 50px 0
+
+            & .auctions
+                align-items: center
+
+        &s__info
+            &-wrap
+                border-top-color: $orange
+
+            &-value
+                color: $orange
+
+        &s__price
+            svg *
+                stroke: $grey-179
+
+        &s__cost
+            &-up
+                color: $orange
+
+        &s__action a
+            color: $orange
+
+        &s__watch-more
+            justify-content: center
+            align-items: center
+
+        & .auction__back
+            width: fit-content
+
+        &-first
+            & .auction__back
+                right: 0px
+
+        &-second
+            .auction__content
+                padding-bottom: 0
+
+            & .auction__back
+                top: 502px
+                left: 0px
+
+
+    & .article-list__pages
+        margin-top: 25px
+        justify-content: space-between
+        grid-gap: 0
+        @media screen and (min-width: $mobileM)
+            margin-top: 28px
+        @media screen and (min-width: $tabletS)
+            margin-top: 32px
+            grid-gap: 20px
+        @media screen and (min-width: $desktopS)
+            margin-top: 30px
+
+
+    & .CEO
+        @media screen and (max-width: $mobileM)
+            margin: 60px 0
+        @media screen and (min-width: $mobileM)
+            margin: 64px 0
+        @media screen and (min-width: $tabletS)
+            margin: 80px 0
+        @media screen and (min-width: $desktopS)
+            margin: 100px 0
+        @media screen and (min-width: $desktopM)
+            margin: 120px 0
+
+        & > .container
+            border-top: 1px solid $black-21
+
+        & h3
+            @media screen and (min-width: 0)
+                margin: 20px 0 12px
+            @media screen and (min-width: $mobileL)
+                margin: 24px 0 16px
+            @media screen and (min-width: $desktopS)
+                margin: 30px 0 15px
+
+        & p
+            line-height: 150%
+            letter-spacing: 0.04em
+            margin-bottom: 10px
+            @media screen and (min-width: 0)
+                font-size: 14px
+            @media screen and (min-width: $tabletS)
+                font-size: 15px
+
+        & ul
+            list-style: circle
+            & > li
+                display: flex
+                align-items: center
+                margin-bottom: 8px
+                grid-gap: 12px
+
+                &::before
+                    content: url("../img/marker.svg")
+
+                & > p
+                    margin-bottom: 0
+
+                    & > span
+                        font-weight: 700
+
+.mobile-sort
+    display: none !important
+    @media screen and (max-width: $tabletM)
+        display: block !important
+
+.desktop-sort
+    display: flex !important
+    gap: 10px
+    justify-content: start !important
+
+    @media screen and (max-width: $tabletM)
+        flex-wrap: wrap
+
+    svg
+        display: none
+        height: 13px
+
+    .radio-list
+        font-weight: 600
+        display: flex
+        gap: 15px
+        justify-content: start !important
+
+        @media screen and (max-width: $tabletM)
+            flex-wrap: wrap
+
+    input
+        display: none
+
+        &:checked + svg
+            display: inline-block
+
+    .sort__item.active
+        color: $orange
+
+    .sort__item
+        cursor: pointer
+        display: grid
+        grid-template-columns: 1fr 10px
+        align-items: center
+        gap: 5px
+
+.canvas-wrapper
+    margin: 60px 0 30px
+    display: grid
+    grid-template-columns: 30px 1fr 30px
+    gap: 20px
+    @media screen and (max-width: $mobileL)
+        padding-bottom: 10px
+        overflow-x: auto
+
+
+    &__left-title
+        writing-mode: sideways-lr
+        text-align: center
+
+    &__right-title
+        writing-mode: sideways-rl
+        text-align: center
+
+
+.compact-btn
+    cursor: pointer
+    padding: 10px 15px !important
+    color: #fff

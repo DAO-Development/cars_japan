@@ -1,0 +1,69 @@
+.article-list
+    .articles-a__content
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        grid-gap: 40px 35px
+        margin-bottom: 120px
+        @media screen and (max-width: $desktopS)
+            margin-bottom: 100px
+        @media screen and (max-width: $tabletM)
+            display: flex
+            flex-direction: column
+            margin-bottom: 80px
+        @media screen and (max-width: $mobileL)
+            margin-bottom: 64px
+        @media screen and (max-width: $mobileS)
+            margin-bottom: 60px
+
+        &--snd
+            margin-top: 120px
+            @media screen and (max-width: $desktopS)
+                margin-top: 100px
+            @media screen and (max-width: $tabletM)
+                margin-top: 80px
+            @media screen and (max-width: $mobileL)
+                margin-top: 64px
+            @media screen and (max-width: $mobileS)
+                margin-top: 60px
+
+        picture
+            height: 260px
+            @media screen and (max-width: $tabletM)
+                height: 180px
+            @media screen and (max-width: $mobileL)
+                height: 134px
+
+
+    .articles-a__item
+        max-width: 656px
+        padding-bottom: 20px
+        border-bottom: 1px solid $grey-52
+        @media screen and (max-width: $tabletM)
+            display: grid
+            grid-template-columns: 1fr 1fr
+        @media screen and (max-width: $mobileM)
+            display: flex
+            flex-direction: column
+
+
+    &__pages
+        display: flex
+        width: fit-content
+        margin: 0 auto
+        grid-gap: 20px
+        grid-column: 1/4
+
+    &__page
+        display: grid
+        place-items: center
+        width: 40px
+        height: 40px
+        text-decoration: none
+        font-family: Montserrat, sans-serif
+        font-weight: 700
+        color: $black-21
+
+    &__page--active
+        background: $orange
+        color: $white
+

@@ -1,0 +1,305 @@
+.buy-car
+    position: relative
+    padding-top: 83px
+    overflow: hidden
+
+    & .back
+        position: absolute
+        right: 0
+        bottom: -122px
+
+    h2
+        border-bottom: 1px solid $black-21
+        width: 100%
+        text-align: left
+        padding-bottom: 21px
+        @media screen and (max-width: $mobileL)
+            padding-bottom: 13px
+
+    & .container:nth-child(3)
+        @media screen and (max-width: $desktopM)
+            width: 100%
+
+    &__description
+        margin-top: 60px
+        @media screen and (max-width: $desktopS)
+            margin-top: 50px
+        @media screen and (max-width: $mobileL)
+            margin-top: 40px
+
+        &-main
+            font-family: "Montserrat Alternates", Montserrat, sans-serif
+            font-size: 20px
+            font-weight: 700
+            line-height: 26px
+            letter-spacing: 0.045em
+            margin-bottom: 20px
+            @media screen and (max-width: $mobileM)
+                font-size: 16px
+                line-height: 21px
+
+        &-text
+            font-size: 16px
+            font-weight: 400
+            line-height: 26px
+            letter-spacing: 0.04em
+            max-width: 900px
+            @media screen and (max-width: $mobileM)
+                font-size: 14px
+                line-height: 22px
+
+    &__banner
+        width: 100%
+        height: 454px
+        display: block
+        margin: 30px 0
+        @media screen and (max-width: $tabletM)
+            height: 320px
+        @media screen and (max-width: $mobileL)
+            margin: 20px 0
+            height: 300px
+        @media screen and (max-width: $mobileM)
+            height: 230px
+        @media screen and (max-width: $mobileS)
+            height: 200px
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+    &__steps
+        padding: 20px 0
+        display: grid
+        grid-template-columns: 1fr 250px 1fr
+        @media screen and (max-width: $desktopXS)
+            grid-template-columns: 1fr 150px 1fr
+        @media screen and (max-width: $tabletM)
+            grid-template-columns: 1fr 1fr
+            gap: 20px
+        @media screen and (max-width: $tabletS)
+            display: block
+
+
+    &__text
+        display: grid
+        height: fit-content
+        align-self: center
+        @media screen and (max-width: $tabletSM)
+            align-self: start
+
+    &__arrow
+        grid-column: 2/3
+        width: max-content
+
+        &.arrow1
+            margin-left: -60px
+
+        &.arrow2
+            margin-left: -60px
+            @media screen and (max-width: $desktopXS)
+                margin-top: -60px
+                margin-left: -80px
+                transform: skewY(-20deg)
+
+        &.arrow3
+            @media screen and (max-width: $desktopXS)
+                margin-top: 40px
+                margin-left: -60px
+
+        &.arrow4
+            transform: skewY(-20deg)
+            margin-top: -140px
+            margin-left: -60px
+            @media screen and (max-width: $desktopXS)
+                transform: skewY(-30deg) scale(1.1)
+                margin-left: -80px
+
+        &.arrow5
+            margin-left: -30px
+
+        &.arrow6
+            transform: skewY(-10deg)
+            margin-top: -80px
+            margin-left: -60px
+
+        &.arrow7
+            @media screen and (max-width: $desktopXS)
+                margin-top: 35px
+                margin-left: -50px
+
+        &.arrow8
+            margin-top: -20px
+            margin-left: -65px
+            transform: scaleX(1.1) skewY(-10deg)
+            @media screen and (max-width: $desktopXS)
+                margin-top: -80px
+                margin-left: -90px
+
+        &.arrow9
+            margin-left: -30px
+            @media screen and (max-width: $desktopXS)
+                margin-left: -50px
+                margin-top: 20px
+
+        @media screen and (max-width: $desktopXS)
+            width: 250px
+        @media screen and (max-width: $tabletM)
+            display: none
+
+    &__step
+        padding: 24px
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 30px
+        align-items: center
+        position: relative
+        height: fit-content
+
+        &:nth-child(4n+1)
+            grid-column: 1/2
+
+        &:nth-child(4n+3)
+            grid-column: 3/4
+
+        &.step2
+            grid-row: 1/3
+            place-self: end start
+            @media screen and (max-width: $desktopXS)
+                place-self: center start
+                margin-top: 30px
+
+        &.step4
+            place-self: center start
+            @media screen and (max-width: $desktopXS)
+                margin-top: -50px
+
+        &.step6
+            margin-top: 75px
+
+        &.step8
+            grid-row: 8/9
+            margin-top: -85px
+            @media screen and (max-width: $desktopS)
+                margin-top: -160px
+            @media screen and (max-width: $desktopXS)
+                grid-row: auto
+                margin-top: 80px
+
+        &.step10
+            grid-row: 10/11
+            margin-top: -85px
+
+        @media screen and (max-width: $desktopS)
+            grid-template-columns: 127px 250px
+        @media screen and (max-width: $desktopXS)
+            grid-template-columns: 90px 1fr
+        @media screen and (max-width: $tabletM)
+            margin: 0 !important
+            grid-column: auto !important
+            grid-row: auto !important
+            place-self: auto !important
+        @media screen and (max-width: $mobileM)
+            grid-template-columns: 60px 1fr
+            gap: 15px
+
+        h4
+            font-size: 20px
+            align-items: center
+            margin-bottom: 15px
+            color: $orange
+            white-space: nowrap
+            @media screen and (max-width: $desktopS)
+                white-space: normal
+            @media screen and (max-width: $mobileL)
+                font-size: 16px
+
+    &__split
+        height: 100%
+        border-left: 1px solid $grey-181
+        display: block
+        @media screen and (max-width: $tabletM)
+            display: none
+            width: unset
+
+    &__number
+        display: grid
+        color: $orange
+        font-family: Montserrat, sans-serif
+        font-size: 50px
+        font-weight: 700
+        line-height: 1
+        letter-spacing: 0.045em
+        text-align: center
+        align-items: center
+        box-sizing: content-box
+        border: 7px solid $orange
+        border-radius: 50%
+        height: 113px
+        width: 113px
+        @media screen and (max-width: $desktopXS)
+            height: 80px
+            width: 80px
+            font-size: 40px
+            border: 5px solid $orange
+        @media screen and (max-width: $mobileM)
+            height: 60px
+            width: 60px
+            font-size: 32px
+            border: 3px solid $orange
+
+    &__content
+        width: 384px
+        font-size: 14px
+        font-weight: 400
+        line-height: 21px
+        letter-spacing: 0.04em
+        overflow: hidden
+
+        @media screen and (max-width: $desktopS)
+            max-width: 25vw
+        @media screen and (max-width: $desktopXS)
+            max-width: 28vw
+        @media screen and (max-width: $tabletS)
+            max-width: unset
+            width: 100%
+        @media screen and (max-width: $mobileL)
+            padding: 0
+            width: unset
+        @media screen and (max-width: $mobileM)
+            -webkit-line-clamp: 3
+
+        @media screen and (max-width: $mobileS)
+            font-size: 12px
+            line-height: 150%
+
+        h4
+            margin-bottom: 12px
+            font-family: Montserrat
+            font-size: 18px
+            font-weight: 700
+            line-height: 23px
+            letter-spacing: 0.045em
+            @media screen and (max-width: $mobileL)
+                font-size: 16px
+                line-height: 21px
+                margin-bottom: 9px
+            @media screen and (max-width: $mobileS)
+                font-size: 14px
+
+    &__open
+        position: absolute
+        top: 0
+        right: 0
+        background: $grey-52
+        width: 30px
+        height: 30px
+        display: grid
+        place-items: center
+
+    .full-text
+        display: -webkit-box
+        -webkit-line-clamp: unset
+
+    .open-btn
+        transform: rotate(180deg)

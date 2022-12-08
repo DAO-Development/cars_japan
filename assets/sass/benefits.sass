@@ -1,0 +1,388 @@
+.benefits
+    padding: 130px 0
+    @media screen and (max-width: $desktopS)
+        padding: 100px 0
+    @media screen and (max-width: $tabletM)
+        padding: 80px 0
+    @media screen and (max-width: $tabletS)
+        display: none
+        padding: 120px 0
+        overflow: hidden
+    @media screen and (max-width: $mobileL)
+        padding: 64px 0
+    @media screen and (max-width: $mobileS)
+        padding: 60px 0
+
+    h2
+        color: $blue
+        font-size: 36px
+        margin-bottom: 60px
+        @media screen and (max-width: $desktopS)
+            margin-bottom: 46px
+        @media screen and (max-width: $mobileL)
+            margin-bottom: 40px
+
+    &__container
+        width: 1115px
+        margin: 0 auto
+        overflow: visible
+
+        &:nth-child(2)
+            margin-bottom: 54px
+        @media screen and (max-width: $desktopS)
+            width: 994px
+        @media screen and (max-width: $tabletM)
+            padding: 0 56px
+            width: 100%
+        @media screen and (max-width: $mobileL)
+            padding: 0 40px
+        @media screen and (max-width: $mobileM)
+            padding: 0 32px
+        @media screen and (max-width: $mobileS)
+            padding: 0 30px
+
+    &__list
+        // width: 142%
+        padding-top: 0
+        margin-bottom: 120px
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+        gap: 45px 30px
+
+        @media screen and (max-width: $mobileL)
+            margin-bottom: 64px
+        @media screen and (max-width: $mobileS)
+            margin-bottom: 60px
+
+        &::-webkit-scrollbar
+            width: 8px
+            height: 4px
+            background-color: #f0f0f0
+
+        &::-webkit-scrollbar-thumb
+            background-color: #707070
+            border-radius: 9em
+            box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0)
+
+    &__item
+        display: inline-flex
+        align-items: center
+        width: 30%
+
+        @media screen and (max-width: $tabletSM)
+            width: 45%
+
+    &__item-content
+        width: 100%
+        font-size: 15px
+        line-height: 150%
+        letter-spacing: 0.04em
+        position: relative
+
+        height: 100%
+        display: flex
+        align-items: center
+        gap: 15px
+
+        @media screen and (max-width: $mobileL)
+            width: 288px
+            padding: 12px 24px
+            font-size: 14px
+        @media screen and (max-width: $mobileS)
+            width: 280px
+            padding: 4px 19px
+
+    &__brand-wrap
+        width: 100%
+        border-top: 1px solid $grey-185
+        border-bottom: 1px solid $grey-185
+
+    &__brand-wrap--first
+        border-bottom: none
+
+    &__brands
+        margin: 0 auto
+        display: grid
+        grid-template-columns: 1.65fr 1fr 1fr 1fr 1fr 1fr 1.65fr
+        place-items: center
+        border-bottom: 1px solid $grey-185
+
+        @media screen and (max-width: $desktopS)
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+
+        @media screen and (max-width: $tabletM)
+            grid-template-columns: 1fr 1fr
+            .empty
+                display: none
+
+    .empty
+        width: 100%
+        height: 100%
+
+    &__brand
+        width: 100%
+        height: 175px
+        display: grid
+        place-items: center
+
+        @media screen and (max-width: $tabletM)
+            height: 135px
+        @media screen and (max-width: $tabletS)
+            height: 120px
+        @media screen and (max-width: $mobileM)
+            height: 115px
+
+    &__brand
+        border-left: 1px solid $grey-185
+
+    &__brand:nth-child(7n-5)
+        border-left: 0
+
+    &__brands > *:nth-child(n+8)
+        border-top: 1px solid $grey-185
+
+    &__brand
+        @media screen and (max-width: $tabletM)
+            border: none
+            border-top: 1px solid $grey-185
+            padding-right: 11.4%
+
+            &:nth-child(2), &:nth-child(3)
+                border-top: none
+
+            &:nth-child(2n)
+                border-right: 1px solid $grey-185
+                padding-right: 0
+                padding-left: 11.4%
+
+    &__number
+        bottom: 0
+        right: 0
+        font-weight: bold
+        font-size: 64px
+        line-height: 130%
+        letter-spacing: 0.045em
+        color: $blue
+
+    &__desc
+        border-top: 1px solid black
+        padding-top: 30px
+        margin-top: 120px
+        @media screen and (max-width: $desktopS)
+            margin-top: 100px
+        @media screen and (max-width: $tabletM)
+            margin-top: 80px
+        @media screen and (max-width: $mobileL)
+            margin-top: 64px
+        @media screen and (max-width: $mobileM)
+            padding-top: 15px
+        @media screen and (max-width: $mobileS)
+            margin-top: 60px
+
+        h3
+            margin-bottom: 15px
+            font-weight: bold
+            font-size: 18px
+            line-height: 130%
+            letter-spacing: 0.045em
+            @media screen and (max-width: $mobileM)
+                font-size: 16px
+
+        p
+            margin-bottom: 7px
+            font-size: 15px
+            line-height: 150%
+            letter-spacing: 0.04em
+            @media screen and (max-width: $tabletM)
+                font-size: 14px
+            @media screen and (max-width: $mobileM)
+                font-size: 12px
+
+    div.benefits
+        overflow: hidden
+
+.benefits.benefits-steps
+    padding: 50px 0
+    @media screen and (max-width: $tabletS)
+        display: block
+        padding: 50px 0
+        overflow: hidden
+    @media screen and (max-width: $tabletM)
+        padding: 30px 0
+    @media screen and (max-width: $mobileL)
+        padding: 20px 0
+
+    .buy-car__step
+        gap: 30px
+        display: flex
+
+    .buy-car__num
+        padding: 0
+        font-size: 50px
+
+    .buy-car__content
+        h4
+            margin-bottom: 0
+
+    h2
+        font-size: 38px
+        margin-bottom: 60px
+        color: $orange
+        white-space: nowrap
+        @media screen and (max-width: $desktopS)
+            margin-bottom: 46px
+        @media screen and (max-width: $mobileL)
+            margin-bottom: 40px
+
+    .benefits
+        &__container
+            width: 1260px
+            margin: 0 auto
+            overflow: visible
+            padding: 50px 0
+            @media screen and (max-width: $desktopS)
+                width: 994px
+            @media screen and (max-width: $tabletM)
+                padding: 0 56px
+                width: 100%
+            @media screen and (max-width: $mobileL)
+                padding: 0 40px
+            @media screen and (max-width: $mobileM)
+                padding: 0 32px
+            @media screen and (max-width: $mobileS)
+                padding: 0 30px
+
+        &__list
+            // width: 142%
+            display: grid
+            padding-top: 0
+            //gap: 45px 30px
+            gap: 0
+            justify-content: unset
+            @media screen and (max-width: $tabletM)
+                display: flex
+                flex-direction: column
+                align-items: center
+                width: fit-content
+                margin: 0 auto
+
+            @media screen and (max-width: $mobileL)
+                margin-bottom: 64px
+            @media screen and (max-width: $mobileS)
+                margin-bottom: 60px
+
+            &::-webkit-scrollbar
+                width: 8px
+                height: 4px
+                background-color: #f0f0f0
+
+            &::-webkit-scrollbar-thumb
+                background-color: #707070
+                border-radius: 9em
+                box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0)
+
+        &__item
+            //display: block
+            width: fit-content
+            margin: 23px 0
+
+            &:nth-child(1)
+                grid-column: 1/5
+
+            &:nth-child(2)
+                grid-column: 3/5
+                grid-row: 2/3
+                place-self: center
+                @media screen and (max-width: $desktopS)
+                    place-self: start
+                    margin-left: -40px
+                @media screen and (max-width: $tabletM)
+                    margin-left: 0
+
+            &:nth-child(3)
+                grid-column: 2/4
+                place-self: end
+
+            &:nth-child(4)
+                grid-column: 1/4
+                margin-left: 50px
+
+            &:nth-child(5)
+                grid-column: 2/4
+                grid-row: 5/6
+                place-self: end
+
+            @media screen and (max-width: $tabletM)
+                width: 100%
+                &:nth-child(n)
+                    margin: 10px 0
+
+        &__item-content
+            padding: 35px 27px
+            border-radius: 20px
+            background-color: $blue
+            color: $orange
+            width: 100%
+            font-family: Montserrat, sans-serif
+            font-size: 24px
+            line-height: 130%
+            letter-spacing: 0.04em
+            position: relative
+            border: none
+
+            height: 100%
+            @media screen and (max-width: $desktopS)
+                padding: 20px
+            @media screen and (max-width: $tabletM)
+                padding: 5px 20px
+
+            @media screen and (max-width: $mobileL)
+                padding: 12px 24px
+                font-size: 14px
+            @media screen and (max-width: $mobileS)
+                padding: 4px 19px
+
+        &__arrow
+            width: auto
+            @media screen and (max-width: $tabletM)
+                display: none
+
+            &.step1
+                grid-column: 2/3
+                grid-row: 2/3
+                place-self: start center
+                @media screen and (max-width: $desktopS)
+                    max-height: 120px
+                    place-self: start
+                @media screen and (max-width: $tabletM)
+                    max-height: 90px
+                    place-self: start center
+
+            &.step2
+                grid-column: 4/5
+                grid-row: 2/4
+                place-self: end
+                @media screen and (max-width: $desktopS)
+                    max-height: 240px
+                    place-self: end start
+                @media screen and (max-width: $tabletM)
+                    max-height: 180px
+                    place-self: end
+
+            &.step3
+                grid-row: 3/4
+                margin-left: 80px
+                margin-right: -80px
+                place-self: end
+                @media screen and (max-width: $desktopS)
+                    max-height: 150px
+
+            &.step4
+                grid-row: 5/6
+                grid-column: 1/3
+                place-self: center
+                @media screen and (max-width: $desktopS)
+                    max-height: 120px
+                    margin-right: 59px
+                    place-self: start center

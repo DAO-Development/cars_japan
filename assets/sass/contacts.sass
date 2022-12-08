@@ -1,0 +1,532 @@
+.contacts
+    .page-title
+        margin-bottom: 47px
+
+    &__info
+        display: grid
+        grid-template-columns: 2fr 1fr
+        place-items: center
+        grid-gap: 0 50px
+        @media screen and (max-width: $tabletS)
+            grid-template-columns: 2.4fr 1fr
+        @media screen and (max-width: $mobileL)
+            display: flex
+            flex-direction: column
+            place-items: start
+            grid-gap: 32px
+            > *
+                margin-top: 0
+
+
+    &__connect
+        display: flex
+        flex-wrap: wrap
+        grid-gap: 50px 60px
+        border-right: 1px solid $grey-229
+        grid-column: 1/2
+        grid-row: 1/3
+
+        @media screen and (max-width: $desktopS)
+            grid-gap: 50px 46px
+
+        @media screen and (max-width: $tabletM)
+            display: grid
+            grid-template-columns: 1fr 1fr
+            grid-gap: 28px 40px
+            padding-right: 40px
+
+        @media screen and (max-width: $tabletS)
+            grid-column: 1/3
+            grid-row: 1/2
+            display: flex
+            grid-gap: 27px 38px
+            padding-right: 0
+            border-right: 0
+
+        @media screen and (max-width: $mobileL)
+            display: grid
+            grid-gap: 23px 58px
+        @media screen and (max-width: $mobileM)
+            display: flex
+            flex-direction: column
+            height: 250px
+            flex-wrap: wrap
+            grid-gap: 16px
+            border-bottom: 1px solid $grey-229
+
+        @media screen and (max-width: $mobileS)
+            grid-gap: 18px
+            height: unset
+            flex-wrap: nowrap
+            padding-bottom: 28px
+
+
+        a
+            color: $black-21
+            text-decoration: none
+
+    &__item-num
+        & a
+            font-family: Montserrat, sans-serif
+            font-size: 22px
+            font-weight: 700
+            line-height: 27px
+            letter-spacing: 0.02em
+            white-space: nowrap
+            color: $white
+            @media screen and (max-width: $tabletM)
+                font-size: 20px
+                line-height: 24px
+            @media screen and (max-width: $mobileS)
+                font-size: 18px
+                line-height: 22px
+
+
+    &__mes
+        display: flex
+        grid-gap: 20px
+
+    &__item-desc
+        font-size: 14px
+        font-weight: 400
+        line-height: 16px
+        letter-spacing: 0.02em
+        color: $white-op50
+        padding-top: 4px
+        @media screen and (max-width: $mobileL)
+            font-size: 12px
+        @media screen and (max-width: $mobileS)
+            font-size: 12px
+            line-height: 14px
+
+    &__mail
+        & .contacts__item-num a
+            color: $blue
+
+
+    &__loc
+        display: flex
+        flex-direction: column
+
+        grid-column: 2/3
+        grid-row: 1/2
+
+        @media screen and (max-width: $tabletS)
+            grid-column: 1/2
+            grid-row: 2/3
+            place-self: end start
+            margin-top: 65px
+            h3
+                font-size: 20px
+                @media screen and (max-width: $mobileS)
+                    font-size: 16px
+
+        @media screen and (max-width: $mobileL)
+            place-self: start
+
+        &-item
+            margin-bottom: 16px
+            display: flex
+            grid-gap: 12px
+
+        &-text
+            font-size: 16px
+            font-weight: 400
+            line-height: 22px
+            letter-spacing: 0.04em
+            @media screen and (max-width: $tabletS)
+                max-width: 310px
+            @media screen and (max-width: $mobileL)
+                max-width: unset
+            @media screen and (max-width: $mobileS)
+                font-size: 14px
+                line-height: 20px
+
+
+        &-link
+            color: $blue
+            font-size: 12px
+            line-height: 14px
+            letter-spacing: 0.03em
+            margin-top: 8px
+
+    &__soc
+        display: flex
+        grid-gap: 15px 40px
+        margin-top: 18px
+        grid-column: 2/3
+        grid-row: 2/3
+
+        @media screen and (max-width: $desktopS)
+            grid-gap: 15px 27px
+        @media screen and (max-width: $tabletM)
+            margin-top: 16px
+        @media screen and (max-width: $tabletS)
+            grid-column: 1/2
+            grid-row: 3/4
+            flex-direction: column
+            place-self: start
+        @media screen and (max-width: $mobileL)
+            flex-direction: row
+            margin-top: 6px
+            grid-gap: 15px 40px
+        @media screen and (max-width: $mobileM)
+            flex-direction: column
+            margin-top: -24px
+        @media screen and (max-width: $mobileS)
+            margin-top: -30px
+            grid-gap: 7px
+
+
+        a
+            font-family: Montserrat, sans-serif
+            font-size: 12px
+            font-weight: 700
+            line-height: 130%
+            letter-spacing: 0.04em
+            text-decoration: none
+            color: $black-21
+            display: flex
+            align-items: center
+            grid-gap: 12px
+            white-space: nowrap
+
+
+    &__managers
+        width: 100%
+        place-self: start
+        grid-column: 1/3
+        grid-row: 3/4
+        padding-top: 40px
+        border-top: 1px solid $white-op50
+        margin-top: 40px
+
+        @media screen and (max-width: $desktopS)
+            padding-top: 36px
+            margin-top: 36px
+        @media screen and (max-width: $tabletM)
+            padding-top: 32px
+            margin-top: 32px
+        @media screen and (max-width: $tabletS)
+            grid-column: 2/3
+            grid-row: 2/4
+            flex-direction: column
+            display: flex
+        @media screen and (max-width: $mobileS)
+            padding-top: 23px
+
+
+        &-title
+            font-family: "Montserrat Alternates", sans-serif
+            font-size: 16px
+            font-weight: 700
+            line-height: 20px
+            letter-spacing: 0.04em
+            color: $white-op50
+            margin-bottom: 24px
+            @media screen and (max-width: $tabletM)
+                margin-bottom: 20px
+            @media screen and (max-width: $tabletS)
+                font-size: 14px
+                line-height: 17px
+                margin-bottom: 13px
+            @media screen and (max-width: $tabletS)
+                margin-bottom: 16px
+
+
+        &-list
+            display: flex
+            grid-gap: 58px
+            @media screen and (max-width: $tabletS)
+                flex-direction: column
+                grid-gap: 32px
+            @media screen and (max-width: $mobileL)
+                flex-direction: row
+                place-self: start
+                flex-wrap: wrap
+                grid-gap: 24px 77px
+
+    &__manager
+        display: grid
+        grid-gap: 4px 13px
+        @media screen and (max-width: $tabletM)
+            grid-gap: 0px 11px
+        @media screen and (max-width: $mobileL)
+            grid-gap: 4px 11px
+
+
+        picture
+            grid-column: 1/2
+            grid-row: 1/3
+            overflow: hidden
+            display: block
+            border-radius: 50%
+            border: 1px solid $grey-229
+            width: 40px
+            height: 40px
+
+            img
+                width: 100%
+                height: 100%
+
+        &-name
+            grid-column: 2/3
+            grid-row: 1/2
+
+            font-family: "Montserrat Alternates", sans-serif
+            color: $white
+            font-size: 16px
+            font-weight: 700
+            line-height: 20px
+            letter-spacing: 0.04em
+
+
+        &-number
+            grid-column: 2/3
+            grid-row: 2/3
+
+            a
+                font-size: 14px
+                line-height: 20px
+                letter-spacing: 0.02em
+                text-decoration: none
+                color: $white
+
+    .flex
+        height: 260px
+        position: relative
+        display: flex
+        margin-bottom: 40px
+
+        & > *
+            height: 100%
+
+        .main-filter__lists
+            border-radius: 0
+
+        @media screen and (max-width: $tabletM)
+            display: block
+            height: unset
+
+    .contacts-map
+        box-shadow: 0 10px 10px rgba(0, 0, 0, .2)
+        width: 100%
+        height: 100%
+        @media screen and (max-width: $tabletM)
+            height: 200px
+
+        & > *
+            height: 100%
+
+
+    .main-filter__lists
+        min-width: 500px
+        margin-bottom: 0
+        @media screen and (max-width: $mobileL)
+            min-width: 100%
+
+
+    .main-filter__list-category
+        flex-direction: column !important
+        row-gap: 10px !important
+
+        &.active
+            display: flex !important
+
+
+    .main-filter__categories
+        margin-top: 30px
+
+    &__big-manager
+        display: flex
+        gap: 13px
+        @media screen and (max-width: $tabletM)
+            grid-gap: 0px 11px
+        @media screen and (max-width: $mobileL)
+            grid-gap: 4px 11px
+
+
+        a
+            text-decoration: none
+            color: inherit
+
+        &-city
+            font-size: 18px
+            margin-bottom: 15px
+            font-weight: bold
+
+        picture
+            grid-column: 1/2
+            grid-row: 1/3
+            overflow: hidden
+            display: block
+            border: 1px solid $grey-229
+            width: 140px
+            height: 155px
+
+
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+
+        &-name
+            grid-column: 2/3
+            grid-row: 1/2
+
+            font-family: Montserrat
+            font-size: 20px
+            font-weight: 700
+            line-height: 20px
+            letter-spacing: 0.04em
+            margin-bottom: 10px
+
+
+        &-number
+            grid-column: 2/3
+            grid-row: 2/3
+            display: flex
+            align-items: center
+            gap: 7px
+            margin-bottom: 10px
+
+            a
+                font-size: 16px
+                line-height: 20px
+                letter-spacing: 0.02em
+                color: $black-21
+                text-decoration: none
+
+    &__banner
+        margin: 120px auto
+        display: block
+        width: 100%
+        max-width: 99vw
+        width: 1345px
+
+        @media screen and (max-width: $mobileM)
+            width: 100%
+            margin: 63px 0
+
+        @media screen and (max-width: $mobileL)
+            width: 86vw
+        @media screen and (max-width: $tabletS)
+            width: 85.8vw
+            margin: 63px auto
+
+        @media screen and (max-width: $tabletM)
+            width: 88.62vw
+            margin: 80px auto
+
+        @media screen and (max-width: $desktopS)
+            width: 1200px
+            margin: 100px auto
+
+        img
+            width: 100%
+
+    & > .contacts__banner
+        margin-bottom: 0
+
+    &__bank-details
+        @media screen and (min-width: 0)
+            margin: 60px 0
+        @media screen and (min-width: $mobileM)
+            margin: 64px 0
+        @media screen and (min-width: $tabletS)
+            margin: 80px 0
+        @media screen and (min-width: $desktopS)
+            margin: 100px 0
+        @media screen and (min-width: $desktopM)
+            margin: 120px 0
+
+    & .bank-details
+        max-width: 1042px
+        background: white
+        box-shadow: 0 3px 20px $black-op20
+        margin: 0 auto
+        @media screen and (min-width: 0)
+            padding: 30px 22px
+        @media screen and (min-width: $mobileM)
+            padding: 32px 20px
+        @media screen and (min-width: $mobileL)
+            padding: 40px 24px
+        @media screen and (min-width: $tabletS)
+            padding: 48px 28px
+        @media screen and (min-width: $tabletM)
+            padding: 48px
+        @media screen and (min-width: $desktopS)
+            padding: 52px
+        @media screen and (min-width: $desktopM)
+            padding: 60px
+
+        & > h3
+            margin-bottom: 30px
+
+        & > ul
+            @media screen and (min-width: 0)
+                display: block
+            @media screen and (min-width: $mobileL)
+                display: grid
+                grid-auto-flow: column
+                grid-template-columns: 1fr 1fr
+                grid-template-rows: auto auto auto auto auto
+                grid-column-gap: 26px
+                grid-row-gap: 20px
+            @media screen and (min-width: $tabletS)
+                grid-template-columns: 1.5fr 1fr 1fr
+                grid-template-rows: 1fr 1fr 1fr
+                grid-column-gap: 41px
+            @media screen and (min-width: $tabletM)
+                grid-column-gap: 67px
+                grid-template-columns: 2fr 1fr 1fr
+                grid-template-rows: 1fr 1fr 1fr
+            @media screen and (min-width: $desktopS)
+                grid-template-columns: 2fr 1fr 1fr
+                grid-template-rows: 1fr 1fr 1fr
+                grid-row-gap: 22px
+                grid-column-gap: 80px
+
+            & > li
+                @media screen and (min-width: 0)
+                    margin-bottom: 14px
+                @media screen and (min-width: $mobileL)
+                    margin: 0
+
+                & > span
+                    display: block
+
+                    &:first-child
+                        font-size: 14px
+                        line-height: 16px
+                        letter-spacing: 0.045em
+                        margin-bottom: 4px
+
+                    &:nth-child(2)
+                        font-size: 14px
+                        line-height: 150%
+                        letter-spacing: 0.04em
+
+
+                &:nth-child(1)
+                    @media screen and (min-width: 0)
+                        grid-row: auto
+                    @media screen and (min-width: $mobileL)
+                        grid-row: 1/3
+                    @media screen and (min-width: $tabletM)
+                        grid-row: auto
+
+                &:nth-child(2)
+                    @media screen and (min-width: 0)
+                        grid-row: auto
+                    @media screen and (min-width: $tabletS)
+                        grid-row: 3/5
+                    @media screen and (min-width: $tabletM)
+                        grid-row: auto
+
+
+        &__title
+            color: $blue
+
+    .main-filter__category
+        font-size: 15px !important

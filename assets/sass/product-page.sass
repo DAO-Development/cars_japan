@@ -1,0 +1,1047 @@
+.product-page
+    padding-top: 83px
+    position: relative
+    overflow: hidden
+
+    & *
+        position: relative
+        z-index: 10
+
+    & .back
+        position: absolute
+        top: 0
+        right: 0
+        z-index: 0
+
+    & .back2
+        bottom: -600px
+        left: 0
+        top: unset
+        right: unset
+
+    .product
+        &__title
+            padding-bottom: 10px
+            margin-bottom: 12px
+            @media screen and (min-width: $tabletS)
+                display: flex
+                justify-content: space-between
+                align-items: center
+                width: 100%
+
+            &-right
+                display: none
+                @media screen and (min-width: $tabletM)
+                    display: block
+
+        &__name
+            display: flex
+            color: $blue
+            @media screen and (min-width: 0)
+                flex-direction: column
+                margin-bottom: 12px
+            @media screen and (min-width: $mobileL)
+                flex-direction: row
+                align-items: center
+                grid-gap: 10px
+            @media screen and (min-width: $tabletS)
+                margin-bottom: 0
+            @media screen and (min-width: $desktopS)
+                grid-gap: 15px
+
+            & > svg
+                display: none
+                @media screen and (min-width: $mobileL)
+                    display: block
+
+            & > h2
+                margin: 0
+                text-transform: uppercase
+                text-align: left
+
+                & > span
+                    font-weight: 400
+                    color: $black-21
+                    opacity: 0.5
+
+        &__code
+            color: $grey-102
+
+            & ul
+                display: flex
+
+                & li
+                    font-size: 12px
+                    line-height: 14px
+                    position: relative
+                    letter-spacing: 0.04em
+
+                    &::after
+                        content: "/"
+                        margin: 0 6px
+                        color: inherit
+                        font-size: inherit
+
+                    &:last-child
+                        &::after
+                            content: none
+
+        &__rating
+            display: flex
+            flex-direction: column
+
+            &-top
+                display: flex
+                align-items: start
+
+            & .rating
+                &__value
+                    position: relative
+                    font-family: 'Montserrat', sans-serif
+                    font-weight: bold
+                    color: $orange
+                    line-height: 100%
+                    @media screen and (min-width: 0)
+                        font-size: 28px
+                    @media screen and (min-width: $tabletS)
+                        font-size: 30px
+
+                &__info
+                    position: relative
+                    display: inline-block
+
+                    &-text-container
+                        transition: .3s
+                        position: absolute
+                        top: -74px
+                        left: -130px
+                        max-width: 158px
+                        opacity: 0
+                        font-size: 12px
+                        line-height: 14px
+
+                    &-text
+                        width: 100%
+                        padding: 15px 20px
+                        display: grid
+                        grid-template-columns: 95px 10px
+                        grid-template-rows: 1fr 1fr
+                        grid-column-gap: 15px
+                        grid-row-gap: 8px
+                        background-color: white
+                        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1)
+
+                        & > span
+                            &:nth-child(2n)
+                                color: $orange
+                                font-weight: 700
+
+                    &-sign
+                        &:hover
+                            & ~ .rating__info-text-container
+                                opacity: 1
+                                z-index: 100
+                                transition: .3s
+
+                &__description
+                    white-space: nowrap
+                    @media screen and (min-width: 0)
+                        font-size: 12px
+                        font-weight: 500
+                        width: min-content
+                    @media screen and (min-width: $tabletS)
+                        font-size: 10px
+                        font-weight: 400
+
+        &__info-auction
+            display: flex
+            justify-content: space-between
+            align-items: start
+            @media screen and (min-width: 0)
+                margin-bottom: 40px
+            @media screen and (min-width: $tabletS)
+                margin-bottom: 48px
+            @media screen and (min-width: $desktopS)
+                margin-bottom: 40px
+
+            &-left
+                display: flex
+                flex-wrap: wrap
+                gap: 15px
+                align-items: center
+                font-family: 'Montserrat', sans-serif
+                letter-spacing: 0.045em
+                font-size: 10px
+                @media screen and (min-width: 0)
+                    max-width: 224px
+                @media screen and (min-width: $tabletS)
+                    max-width: 424px
+                @media screen and (min-width: $tabletM)
+                    max-width: 800px
+
+                & > div
+                    display: flex
+                    align-items: center
+                    grid-gap: 10px
+
+            &-right
+                @media screen and (min-width: 0)
+                    display: block
+                @media screen and (min-width: $tabletM)
+                    display: none !important
+
+            &__info
+                padding: 12px 20px
+                border: 1px solid $blue
+                background-color: $blue
+                border-radius: 10px
+                font-weight: 700
+                color: $white
+                font-family: "Montserrat Alternates", Montserrat, sans-serif
+                text-transform: uppercase
+                @media screen and (min-width: 0)
+                    display: none !important
+                @media screen and (min-width: $tabletS)
+                    display: flex !important
+
+            &__clock
+                text-transform: uppercase
+                font-weight: 700
+                border-radius: 100px
+                border: 1px solid $blue
+                @media screen and (min-width: 0)
+                    padding: 8px 20px
+                    font-size: 8px
+                    grid-gap: 8px
+                    & > svg
+                        width: 12px
+                        height: 12px
+                @media screen and (min-width: $mobileM)
+                    font-size: 12px
+                @media screen and (min-width: $tabletS)
+                    padding: 12px 20px
+                    font-size: 10px
+                    color: $grey-181
+                    background: none
+
+                    & > svg
+                        width: 16px
+                        height: 16px
+
+                        & > path
+                            fill: $orange
+
+            &__status
+                font-family: Roboto, sans-serif
+                color: $orange
+
+                svg path
+                    fill: $orange
+
+                @media screen and (min-width: 0)
+                    font-size: 12px
+                @media screen and (min-width: $mobileM)
+                    font-size: 14px
+
+        &__gallery
+            @media screen and (min-width: 0)
+                margin-bottom: 20px
+            @media screen and (min-width: $tabletS)
+                margin-bottom: 20px
+            @media screen and (min-width: $tabletSM)
+                padding-left: 60px
+            @media screen and (min-width: $desktopS)
+                margin-bottom: 30px
+
+            & .slick-list
+                overflow: visible
+
+            & .arrow
+                position: absolute
+                top: 50%
+                z-index: 11
+
+                &-prev
+                    left: 0
+
+                &-next
+                    right: 0
+
+            & .product__slide
+                img
+                    height: 300px
+                    @media screen and (max-width: $tabletM)
+                        height: 250px
+
+                @media screen and (max-width: $tabletSM)
+                    padding: 0 30px
+                @media screen and (max-width: $mobileL)
+                    padding: 0 15px
+
+        &__acc-mobile
+            @media screen and (max-width: $mobileL)
+                padding: 15px
+                margin: 0 auto 40px
+                &-title
+                    cursor: pointer
+                    margin-bottom: 0 !important
+                    display: flex
+                    gap: 5px
+                    font-size: 15px
+                    align-items: center
+
+                    svg
+                        display: block
+                        transition: .3s
+                &-content
+                    margin-top: 10px
+                    transition: .3s
+                    max-height: 0
+                    overflow: hidden
+                &.show
+                    .product__acc-mobile-title
+                        svg
+                            transform: rotateZ(180deg)
+
+                    .product__acc-mobile-content
+                        padding-top: 20px
+                        max-height: 1000px
+                        overflow: visible
+
+        &__acc
+            padding: 15px
+
+            @media screen and (min-width: 0)
+                width: 300px
+            @media screen and (min-width: $mobileM)
+                width: 350px
+            @media screen and (min-width: $mobileL)
+                width: 488px
+            @media screen and (min-width: $tabletS)
+                width: 520px
+            @media screen and (min-width: $tabletM)
+                width: 100%
+
+            &-title
+                cursor: pointer
+                margin-bottom: 0 !important
+                display: flex
+                gap: 5px
+                font-size: 18px
+                align-items: center
+                color: $blue
+                text-transform: uppercase
+
+                svg
+                    transition: .3s
+
+            &-content
+                transition: .3s
+                max-height: 0
+                overflow: hidden
+
+            &.show
+                .product__acc-title
+                    svg
+                        transform: rotateZ(180deg)
+
+                .product__acc-content
+                    padding-top: 20px
+                    max-height: 500px
+
+        &__decoding
+            font-size: 12px
+            @media screen and (min-width: $desktopS)
+                display: block
+
+            & > h4
+                margin-bottom: 15px
+
+            & > h5
+                font-size: 12px
+                letter-spacing: 0.045em
+                margin-bottom: 4px
+
+            & > p
+                margin-bottom: 10px
+                line-height: 140%
+                color: $black-21
+                opacity: 0.5
+
+        &__buy-product
+            @media screen and (min-width: 0)
+                margin-bottom: 40px
+            @media screen and (min-width: $desktopS)
+                margin-bottom: 60px
+
+            &__prices
+                display: flex
+                @media screen and (min-width: 0)
+                    flex-direction: column
+                    margin-bottom: 24px
+                @media screen and (min-width: $mobileL)
+                    flex-direction: row
+                    align-items: center
+                @media screen and (min-width: $tabletS)
+                    margin-bottom: 32px
+                @media screen and (min-width: $desktopS)
+                    margin-bottom: 42px
+                @media screen and (min-width: $desktopM)
+                    margin-bottom: 45px
+
+                & .price
+                    @media screen and (min-width: 0)
+                        display: flex
+                        flex-direction: row-reverse
+                        align-items: baseline
+                        justify-content: space-between
+                        margin-bottom: 24px
+                    @media screen and (min-width: $mobileL)
+                        flex-direction: column
+
+                    &-title
+                        font-family: 'Montserrat', sans-serif
+                        font-weight: bold
+                        letter-spacing: 0.045em
+                        color: $orange
+                        @media screen and (min-width: 0)
+                            font-size: 20px
+                        @media screen and (min-width: $mobileL)
+                            font-size: 24px
+                        @media screen and (min-width: $tabletS)
+                            font-size: 32px
+                        @media screen and (min-width: $desktopS)
+                            font-size: 28px
+                        @media screen and (min-width: $desktopM)
+                            font-size: 32px
+
+                    &-description
+                        color: $grey-181
+                        @media screen and (min-width: 0)
+                            font-size: 12px
+                        @media screen and (min-width: $tabletS)
+                            font-size: 14px
+
+                    &-line
+                        margin: 0 30px
+                        border-left: 1px solid $grey-179
+                        @media screen and (min-width: 0)
+                            display: none
+                        @media screen and (min-width: $mobileL)
+                            display: block
+                            height: 33px
+                        @media screen and (min-width: $tabletS)
+                            height: 38px
+
+                    & > span
+                        display: block
+
+            &__delivery
+                display: flex
+                align-items: center
+                grid-gap: 12px
+                @media screen and (min-width: 0)
+                    margin-bottom: 28px
+                    font-size: 12px
+                @media screen and (min-width: $tabletS)
+                    margin-bottom: 40px
+                    font-size: 13px
+                @media screen and (min-width: $desktopS)
+                    margin-bottom: 48px
+                @media screen and (min-width: $desktopM)
+                    margin-bottom: 50px
+
+                & > span
+                    & > span
+                        font-weight: 700
+
+            & > .red-btn
+                display: flex
+                align-items: center
+                box-shadow: 0 5px 20px rgba(74, 0, 18, 0.18)
+                text-transform: uppercase
+                font-weight: bold
+                @media screen and (min-width: 0)
+                    font-size: 14px
+                    padding: 20px 46px
+                    grid-gap: 12px
+                @media screen and (min-width: $mobileM)
+                    font-size: 16px
+                    padding: 20px 55px
+                    grid-gap: 12px
+                @media screen and (min-width: $mobileL)
+                    font-size: 16px
+                    padding: 20px 81px
+                @media screen and (min-width: $tabletS)
+                    font-size: 18px
+                    padding: 22px 98px
+                    grid-gap: 14px
+                @media screen and (min-width: $desktopS)
+                    font-size: 16px
+                    padding: 22px 84px
+                @media screen and (min-width: $desktopM)
+                    font-size: 18px
+                    padding: 22px 98px
+
+        &__characteristic
+            & > h3
+                @media screen and (min-width: $tabletS)
+                    margin-bottom: 28px
+                @media screen and (min-width: $desktopS)
+                    margin-bottom: 30px
+
+            & > ul
+                @media screen and (min-width: 0)
+                    display: block
+                @media screen and (min-width: $tabletM)
+                    display: flex
+                    flex-direction: column
+                    flex-wrap: wrap
+                    height: 270px
+                @media screen and (min-width: $desktopS)
+                    display: block
+                    height: auto
+
+                & > li
+                    display: block
+                    position: relative
+                    overflow: hidden
+                    font-size: 14px
+                    color: $grey-102
+                    @media screen and (min-width: 0)
+                        margin-bottom: 16px
+                    @media screen and (min-width: $tabletS)
+                        margin-bottom: 20px
+                    @media screen and (min-width: $tabletM)
+                        margin-right: 72px
+                        margin-bottom: 24px
+                        &:nth-child(7),
+                        &:nth-child(8),
+                        &:nth-child(9),
+                        &:nth-child(10),
+                        &:nth-child(11)
+                            margin-right: 0
+                    @media screen and (min-width: $desktopS)
+                        margin-right: 0
+                    @media screen and (min-width: $desktopM)
+                        margin-bottom: 26px
+
+                    &:after
+                        content: ''
+                        display: block
+                        position: absolute
+                        bottom: 0
+                        left: 0
+                        width: 100%
+                        height: 2px
+                        border-top: 1px dotted $grey-179
+
+                    & > .row-title
+                        display: inline-block
+                        position: relative
+                        z-index: 2
+                        background: white
+                        padding-right: 5px
+
+                    & > .row-value
+                        font-weight: 700
+                        display: block
+                        position: absolute
+                        top: 0
+                        right: 0
+                        z-index: 2
+                        background: white
+                        padding-left: 5px
+
+        &__additional-info
+            width: 100%
+            background: white
+            box-shadow: 0 3px 20px $black-op20
+            padding: 60px
+
+            & > h3
+                margin-bottom: 30px
+
+            & > ul
+                @media screen and (min-width: 0)
+                    display: block
+                @media screen and (min-width: $mobileM)
+                    display: grid
+                    grid-auto-flow: column
+                    grid-template-columns: 1fr 1fr
+                    grid-column-gap: 35px
+                    grid-row-gap: 16px
+                @media screen and (min-width: $mobileL)
+                    max-height: 1054px
+                @media screen and (min-width: $tabletS)
+                    max-height: 742px
+                    grid-template-columns: 1fr 1.1fr 0.95fr
+                    grid-column-gap: 41px
+                    grid-row-gap: 20px
+                @media screen and (min-width: $tabletM)
+                    max-height: 660px
+                    grid-column-gap: 130px
+                @media screen and (min-width: $desktopS)
+                    grid-template-columns: 1fr 1fr 2fr
+                    max-height: 566px
+                    grid-row-gap: 22px
+                    grid-column-gap: 84px
+
+                & > li
+                    font-size: 14px
+                    @media screen and (min-width: 0)
+                        line-height: 16px
+                        margin-bottom: 14px
+                    @media screen and (min-width: $mobileM)
+                        margin: 0
+                        line-height: 16px
+                    @media screen and (min-width: $tabletS)
+                        line-height: 150%
+
+                    & > span
+                        display: block
+
+                        &:first-child
+                            line-height: 16px
+                            margin-bottom: 4px
+
+                    &:last-child
+                        @media screen and (min-width: 0)
+                            grid-row: 13/14
+                            grid-column: 1/3
+                        @media screen and (min-width: $tabletS)
+                            grid-row: 9/10
+                            grid-column: 1/4
+                        @media screen and (min-width: $desktopS)
+                            max-width: 458px
+                            grid-column: auto
+                            grid-row: 7/10
+
+        &__info
+            display: grid
+            grid-template-columns: 2fr 1fr
+            gap: 0 30px
+            @media screen and (max-width: $tabletS)
+                display: block
+
+            & > .btn
+                grid-column: 2/3
+                grid-row: 1/2
+                padding: 22px 70px
+                height: fit-content
+                width: fit-content
+                place-self: start end
+                @media screen and (max-width: $mobileL)
+                    margin: 0 auto
+
+        &__slide
+            & .slide
+                &__photo
+                    width: 580px
+                    height: 405px
+                    object-fit: cover
+                    border-radius: 15px
+                    @media screen and (max-width: $desktopS)
+                        width: 450px
+                        height: 300px
+                    @media screen and (max-width: $tabletM)
+                        width: 40vw
+                        height: 250px
+                    @media screen and (max-width: $tabletSM)
+                        width: 100%
+                        height: 250px
+
+
+        &-similar
+            padding: 40px 0 150px
+
+            h2
+                color: $blue
+
+            &__list
+                display: flex
+                align-items: center
+                gap: 17px
+
+            &__photo
+                margin-bottom: 26px
+
+            &__card
+                width: fit-content
+
+                &-wrapper
+                    width: fit-content
+
+            &__card-content
+                padding-top: 9px
+                border-top: 1px solid $orange
+
+            &__anchor a
+                font-family: "Montserrat Alternates", Montserrat, sans-serif
+                font-size: 20px
+                color: $orange
+
+            &__price
+                font-size: 20px
+                color: $orange
+
+    & .video-review
+        & > .container
+            @media screen and (min-width: 0)
+                padding: 64px 0
+            @media screen and (min-width: $tabletS)
+                padding: 80px 0
+            @media screen and (min-width: $tabletM)
+                display: flex
+                align-items: center
+                justify-content: space-between
+            @media screen and (min-width: $desktopS)
+                padding: 120px 0
+
+            & > h2
+                text-align: start
+                @media screen and (min-width: 0)
+                    margin: 0 0 28px
+                @media screen and (min-width: $tabletS)
+                    margin: 0 0 36px
+                    max-width: 565px
+                @media screen and (min-width: $tabletM)
+                    margin-bottom: 0
+                    max-width: 310px
+                    font-size: 32px
+
+                & > span
+                    color: $orange
+
+        &__video
+            position: relative
+
+            &:hover
+                & .filter
+                    opacity: 1
+
+            & img,
+            & .filter
+                @media screen and (min-width: 0)
+                    width: 300px
+                    height: 160px
+                    margin: 0 auto
+                @media screen and (min-width: $mobileM)
+                    width: 350px
+                    height: 200px
+                @media screen and (min-width: $mobileL)
+                    width: 488px
+                    height: 280px
+                @media screen and (min-width: $tabletS)
+                    width: 656px
+                    height: 370px
+                @media screen and (min-width: $tabletM)
+                    width: 520px
+                    height: 290px
+                    margin: 0
+                @media screen and (min-width: $desktopS)
+                    width: 770px
+                    height: 400px
+
+            & .filter
+                z-index: 1000
+                opacity: 1
+                position: absolute
+                background-color: $black-op50
+                background-image: url("../img/product-page/youtube-icon.png")
+                background-repeat: no-repeat
+                background-position: center
+                transition: 0.3s ease
+
+    & .interesting-cars
+        background: $background-grey-gradient
+
+.sincing-slider
+    @media screen and (max-width: $mobileM)
+        width: 92vw
+    @media screen and (min-width: $mobileM)
+        width: 92vw
+    @media screen and (min-width: $tabletS)
+        width: 92vw
+    @media screen and (min-width: $desktopS)
+        max-width: 685px
+    @media screen and (min-width: $desktopM)
+        max-width: 770px
+
+    & .gallery
+        &-open
+            margin-bottom: 20px
+            @media screen and (min-width: 0)
+                display: none
+            @media screen and (min-width: $desktopS)
+                display: block
+
+            & .open-slide
+                & img
+                    object-fit: cover
+
+                    @media screen and (min-width: $desktopS)
+                        width: 685px
+                        height: 355px
+                    @media screen and (min-width: $desktopM)
+                        width: 770px
+                        height: 480px
+
+        &-carousel
+            & .carousel-slide
+                & .carousel-filter
+                    display: none
+
+                & img
+                    @media screen and (min-width: 0)
+                        width: 270px
+                        height: 150px
+                    @media screen and (min-width: $mobileM)
+                        width: 300px
+                        height: 180px
+                    @media screen and (min-width: $mobileL)
+                        width: 340px
+                        height: 204px
+                    @media screen and (min-width: $tabletS)
+                        width: 400px
+                        height: 240px
+                    @media screen and (min-width: $desktopS)
+                        width: 188px
+                        height: 110px
+                    @media screen and (min-width: $desktopM)
+                        width: 205px
+                        height: 120px
+
+    & .slick-current
+        position: relative
+
+        & > .carousel-filter
+            @media screen and (min-width: 0)
+                display: none
+            @media screen and (min-width: $desktopS)
+                display: block !important
+                width: 188px
+                height: 110px
+            @media screen and (min-width: $desktopM)
+                width: 205px
+                height: 120px
+                z-index: 10000
+                position: absolute
+                background: linear-gradient(0deg, $grey-52-op60, $grey-52-op60)
+
+    & .arrow
+        width: 28px
+        height: 28px
+        display: flex
+        align-items: center
+        cursor: pointer
+        position: absolute
+        top: 46%
+
+        img
+            display: block
+
+    & .arrow-prev
+        z-index: 1000
+        position: absolute
+        left: 20px
+
+    & .arrow-next
+        z-index: 1000
+        position: absolute
+        right: 20px
+
+
+.categories
+    &-tabs
+        flex-direction: row
+        align-items: center
+        @media screen and (min-width: 0)
+            display: none
+        @media screen and (min-width: $desktopS)
+            display: flex
+            width: 1177px
+
+        .category
+            padding-bottom: 6px
+            margin-bottom: 0
+            font-size: 20px
+            border-bottom: 1px solid inherit
+            @media screen and (max-width: $desktopS)
+                font-size: 18px
+
+            &:hover,
+            &.active
+                padding-bottom: 5px
+                border-bottom: 1px solid black
+
+    &-select
+        margin-bottom: 0
+
+        & > select
+            display: block
+            margin: 0 auto
+            border: none
+            border-bottom: 1px solid $black-21
+            background: none
+            font-family: 'Montserrat', sans-serif
+            font-weight: 700
+            @media screen and (min-width: 0)
+                padding-bottom: 10px
+                width: 100%
+                font-size: 18px
+            @media screen and (min-width: $mobileM)
+                padding-bottom: 12px
+                width: 350px
+                font-size: 18px
+            @media screen and (min-width: $mobileL)
+                width: 488px
+            @media screen and (min-width: $tabletS)
+                width: 656px
+                padding-bottom: 15px
+                font-size: 24px
+
+            &:focus-visible
+                outline: none
+
+        @media screen and (min-width: $desktopS)
+            display: none
+
+    &-line
+        border-left: 1px solid $grey-185
+        @media screen and (min-width: $desktopS)
+            height: 25px
+            margin: 0 36px
+        @media screen and (min-width: $desktopM)
+            height: 38px
+
+
+.product-full-price
+    display: flex
+    justify-content: space-between
+    margin-bottom: 20px
+    width: 100%
+    @media screen and (min-width: 0)
+        margin: 0 auto 40px
+    @media screen and (min-width: $tabletS)
+        margin-bottom: 26px
+
+    h2
+        margin-bottom: 0
+        color: $blue
+        text-align: left
+
+    &-content
+        display: flex
+        flex-direction: column
+        gap: 12px
+        margin-top: 15px
+        @media screen and (max-width: $mobileL)
+            gap: 17px
+
+    &__item
+        display: grid
+        grid-template-columns: 5fr 1fr 1fr
+        gap: 10px 20px
+        @media screen and (max-width: $mobileL)
+            grid-template-columns: 1fr 1fr
+
+    &__yen, &__rub
+        white-space: nowrap
+        place-self: end
+        font-weight: 700
+        @media screen and (max-width: $mobileL)
+            place-self: start
+
+    &__title
+        // display: flex
+        position: relative
+        @media screen and (max-width: $mobileL)
+            grid-column: 1/3
+
+        // gap: 15px
+
+        @media screen and (min-width: $mobileL)
+            align-items: center
+
+    &__info
+        width: 17px
+        display: inline-block
+        margin-left: 4px
+        @media screen and (min-width: $mobileL)
+            position: relative
+
+    &__info-content
+        font-weight: normal
+        display: none
+        position: absolute
+        top: 115%
+        background: white
+        border-radius: 10px
+        padding: 10px
+        box-shadow: 0 3px 20px rgba(0, 0, 0, .2)
+        width: 300px
+        z-index: 100
+        left: 0
+        @media screen and (min-width: $mobileL)
+
+            left: -120px
+
+        ul
+            list-style: disc
+            margin-left: 16px
+            margin-bottom: 10px
+
+    &__info-sign
+        border-radius: 50%
+        width: 17px
+        height: 17px
+        font-size: 12px
+        display: grid
+        place-items: center
+        background: $grey-185
+        color: white
+
+        &:hover
+            & + .product-full-price__info-content
+                display: block
+
+    &__total
+        &-currencies
+            font-weight: 700
+            display: flex
+            justify-content: space-between
+            align-items: center
+            margin-bottom: 8px
+            @media screen and (max-width: $mobileL)
+                flex-direction: column
+                gap: 5px
+                justify-content: start
+                align-items: start
+
+        &-currency-rates
+            margin-top: 5px
+            display: flex
+            gap: 20px
+
+        &-title
+            font-size: 20px
+            color: $black-op50
+            @media screen and (max-width: $mobileL)
+                font-size: 12px
+
+        &-val
+            font-size: 40px
+            line-height: 52px
+            font-weight: 700
+            color: $orange
+            white-space: nowrap
+            @media screen and (max-width: $tabletM)
+                font-size: 32px
+                line-height: 40px
+
+.arrow
+    margin-bottom: 30px
+
+    img
+        width: 38px

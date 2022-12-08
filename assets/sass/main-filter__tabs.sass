@@ -1,0 +1,397 @@
+@import "base"
+.main-filter
+
+    &__category
+        // border: 1px solid $grey-153
+
+        width: inherit
+        display: grid
+        padding: 12px 0 15px !important
+        place-items: center
+        transition: .3s
+        border-bottom: none !important
+        border-radius: 10px 10px 0 0
+        font-size: 18px !important
+        border: 1px solid $black-op20
+        background: $black
+        color: $black-op50
+
+        &:hover
+            border: 1px solid $black-op75
+            color: $black-op75
+            // padding: 8px 0 19px !important
+            box-shadow: 0 -12px 12px rgba(0, 0, 0, .03)
+        // padding: 20px 0 20px !important
+
+        &.active
+            border: 1px solid $black-op75
+            color: $black-op75
+            background: white
+            margin-top: -5px
+            padding-bottom: 20px !important
+    // background: $red-dark
+    // color: white
+    // &:hover
+        // padding: 15px 0 17px !important
+
+    &__categories
+        &-tabs
+            // margin-bottom: 25px
+            gap: 10px
+            justify-content: space-between
+            width: 100% !important
+            display: none
+            @media screen and (min-width: $tabletS)
+                display: flex
+
+        &-select
+            @media screen and (min-width: 0)
+                margin-bottom: 25px
+            @media screen and (min-width: $mobileL)
+                margin-bottom: 25px
+            @media screen and (min-width: $tabletS)
+                margin-bottom: 28px
+                display: none
+
+        & .categories
+            &-tabs
+                flex-direction: row
+                align-items: center
+                @media screen and (min-width: 0)
+                    display: none
+                @media screen and (min-width: $desktopS)
+                    display: flex
+                    width: 1177px
+
+                .category
+                    padding-bottom: 6px
+                    margin-bottom: 0
+                    font-size: 20px
+                    border-bottom: 1px solid inherit
+                    @media screen and (max-width: $desktopS)
+                        font-size: 18px
+
+                    &:hover,
+                    &.active
+                        padding-bottom: 5px
+                        border-bottom: 1px solid black
+
+            &-select
+                margin-bottom: 0
+
+                & > select
+                    display: block
+                    margin: 0 auto
+                    border: none
+                    border-bottom: 1px solid $black-21
+                    background: none
+                    font-family: 'Montserrat', sans-serif
+                    font-weight: 700
+                    @media screen and (min-width: 0)
+                        padding-bottom: 10px
+                        width: 100%
+                        font-size: 18px
+                    @media screen and (min-width: $mobileM)
+                        padding-bottom: 12px
+                        width: 350px
+                        font-size: 18px
+                    @media screen and (min-width: $mobileL)
+                        width: 488px
+                    @media screen and (min-width: $tabletS)
+                        width: 656px
+                        padding-bottom: 15px
+                        font-size: 24px
+
+                    &:focus-visible
+                        outline: none
+
+                @media screen and (min-width: $desktopS)
+                    display: none
+
+            &-line
+                border-left: 1px solid $grey-185
+                @media screen and (min-width: $desktopS)
+                    height: 25px
+                    margin: 0 36px
+                @media screen and (min-width: $desktopM)
+                    height: 38px
+
+
+    &__lists
+        position: relative
+        padding: 20px 20px 15px
+        box-shadow: 0 10px 10px rgba(0, 0, 0, .2)
+        border-radius: 0 0 5px 5px
+        position: relative
+        border-left: 1px solid $black-op20
+        border-right: 1px solid $black-op20
+        border-left: 1px solid $black-op20
+
+        display: grid
+
+        &-more
+            display: none
+
+        & > ul
+            list-style: none
+
+        @media screen and (max-width: $mobileL)
+
+            max-height: 260px
+            overflow-y: hidden
+            padding-bottom: 40px
+            transition: .3s
+            position: relative
+            &-more
+                width: 98%
+                position: absolute
+                bottom: 0
+
+                display: grid
+                place-items: center
+                padding: 6px 6px 10px
+                background: white
+                margin: 0 1% 0
+
+                .more, .less
+                    cursor: pointer
+                    padding: 10px 15px
+                    background: $orange
+                    color: white
+                    border-radius: 5px
+
+                .less
+                    display: none
+
+                .more
+                    display: block
+
+            ul
+                max-height: 100%
+                overflow: hidden
+
+            &.open
+                max-height: 900px
+
+                .more
+                    display: none
+
+                .less
+                    display: block
+
+        @media screen and (min-width: 0)
+            margin-bottom: 40px
+        @media screen and (min-width: $tabletS)
+            margin-bottom: 48px
+        @media screen and (max-width: $desktopS)
+            margin-bottom: 40px
+            padding: 20px
+            box-shadow: 0 6px 12px rgba(0, 0, 0, .2)
+
+        @media screen and (min-width: $desktopS)
+            column-gap: 68px
+
+        & > ul
+            @media screen and (min-width: 0)
+                display: none
+                &.active
+                    max-width: 100% !important
+                    margin: 0 auto
+                    display: flex
+                    flex-direction: column
+                    grid-gap: 24px
+                    justify-content: space-between
+
+            @media screen and (min-width: $mobileS)
+                &.active
+                    width: 100%
+                    margin: 0 auto
+                    row-gap: 24px
+            @media screen and (min-width: $mobileL)
+                &.active
+                    max-height: unset
+                    // width: 488px
+                    display: grid
+                    grid-auto-flow: column
+                    grid-template-columns: 1fr 1fr
+                    grid-auto-flow: unset !important
+            @media screen and (min-width: $tabletS)
+                &.active
+                    grid-template-columns: 1fr 1fr 1fr
+                    column-gap: 113px
+                    row-gap: 24px
+            @media screen and (min-width: $tabletM)
+                &.active
+                    grid-template-columns: 1fr 1fr 1fr 1fr
+                    column-gap: 113px
+                    row-gap: 24px
+            @media screen and (min-width: $desktopS)
+                &.active
+                    display: flex
+                    justify-content: start
+                    flex-direction: row
+                    flex-wrap: wrap
+
+                    gap: 15px
+                    width: 100%
+
+            & > li
+                letter-spacing: 0.045em
+                @media screen and (min-width: 0)
+                    font-size: 14px
+                    line-height: 16px
+                @media screen and (min-width: $desktopS)
+                    margin-bottom: 14px
+                    font-size: 13px
+                    line-height: 15px
+
+                & > a
+                    color: black
+                    text-decoration: none
+                    position: relative
+                    white-space: nowrap
+                    @media screen and (max-width: $tabletS)
+                        position: static
+
+                    .auctions__notes
+                        position: static
+                        display: inline-block
+                        padding: 0 !important
+
+                    .auctions__notes-item
+                        padding: 0 0 0 2px !important
+
+                    .auctions__notes-text
+                        bottom: 27px !important
+                        right: -90px !important
+                        white-space: normal
+                        z-index: 111
+                        @media screen and (max-width: $tabletS)
+                            right: 20px !important
+                            bottom: unset !important
+                            margin-bottom: 80px
+
+                    &:hover
+                        text-decoration: underline
+
+        & .auction
+            background-color: white
+            color: $grey-102
+            margin: 0 auto
+
+            &-first
+                padding-top: 0
+
+            &__content
+                display: block
+
+                & .auctions
+                    align-items: center
+
+            &s__content
+                border: 1px solid $grey-52
+
+            &s__background
+                color: $grey-52
+                opacity: 0.03
+
+            &s__model
+                color: $black-21
+                opacity: 0.5
+
+                &::before
+                    background-color: $grey-102
+
+            &s__price
+                border-top: 1px solid $grey-52
+                border-left: 1px solid $grey-52
+
+            &s__notes
+
+                &-item
+                    @media screen and (min-width: $tabletS)
+                        border-right: 1px solid $grey-179
+                    @media screen and (min-width: $tabletM)
+                        border-right: none
+                        border-bottom: 1px solid $grey-179
+
+                &-text
+                    @media screen and (min-width: $tabletS)
+                        border-left: 1px solid $grey-179
+
+                & svg
+                    & > path
+                        fill: $grey-181
+
+            &s__watch-more
+                color: $grey-181 !important
+                border-top: 1px solid $grey-181
+                border-bottom: 1px solid $grey-181
+
+        & .auctions
+            &__notes
+                position: absolute
+                height: fit-content
+                // top: 0
+                // right: 0
+                bottom: 0
+                left: -18px
+                display: flex
+                border: none !important
+
+                &-text
+                    display: none
+
+                @media screen and (max-width: $tabletSM)
+                    // display: none
+                    right: -10px
+                    bottom: 20px
+                    left: unset
+                    gap: 12px
+                    flex-direction: column
+                    width: fit-content
+                @media screen and (max-width: $tabletSM)
+                    padding-left: 20px
+                    margin-bottom: 0px
+                    &-text
+                        font-size: 12px
+                        line-height: 120%
+                        letter-spacing: 0.02em
+                        width: 250px
+                        left: unset !important
+                        right: 0px !important
+
+                &-item
+                    display: flex
+                    align-items: center
+                    padding: 11px 21px
+                    grid-gap: 20px
+                    border: none !important
+                    position:
+
+                    &:hover
+                        .auctions__notes-text
+                            position: absolute
+                            bottom: 40px
+                            left: -20px
+                            background: white
+                            display: block
+                            border: 1px solid $grey-153
+                            width: 250px
+                            padding: 10px 13px
+                            border-radius: 5px
+
+                    @media screen and (max-width: $tabletS)
+                        border-right: 1px solid $white-op50
+                        &:last-child
+                            border: none
+                    @media screen and (max-width: $tabletS)
+                        padding-top: 3px
+                        padding-bottom: 3px
+
+                &-text
+                    font-size: 12px
+                    line-height: 14px
+                    letter-spacing: 0.045em
+                    padding-left: 8px
+                    border-left: 1px solid $white-op15
