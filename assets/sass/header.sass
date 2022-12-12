@@ -7,13 +7,15 @@
     background: $blue
 
     color: $white
-    //padding: 16px
     position: fixed
     top: 0
     z-index: 100
     width: 100%
     @media screen and (max-width: $desktopS)
         position: static
+    @media screen and (max-width: $tabletS)
+        .container
+            padding: 16px
 
     &__brands
         grid-column: 1/4

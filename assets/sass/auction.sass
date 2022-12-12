@@ -1,6 +1,6 @@
 .auction
     //padding: 20px 0
-    //padding: 120px 0
+    padding: 120px 0
 
     @media screen and (max-width: $tabletM)
         padding: 80px 0
@@ -186,15 +186,15 @@
                 position: relative
                 //grid-column: 1/3
                 grid-column: 2/3
-                //justify-content: center
+        //justify-content: center
 
         @media screen and (max-width: $tabletSM)
             display: flex
             flex-direction: column
             border: 1px solid $white
             margin-top: 0
-            border-radius: 15px
-            padding: 5px
+            border-radius: 10px 15px 15px 15px
+            //padding: 5px
         @media screen and (max-width: $tabletSM) and (min-width: $mobileL)
             display: grid
             grid-template-columns: unset
@@ -296,11 +296,11 @@
             max-height: unset
 
         &-wrap
-            padding: 25px 0 70px
+            padding: 25px 0 55px
             position: relative
             height: auto
             width: 100%
-            border-top: 1px solid $white
+            //border-top: 1px solid $white
 
             & > *:nth-child(1)
                 font-family: Montserrat
@@ -498,7 +498,7 @@
 
     @media screen and (max-width: $mobileL)
         &__action
-            border-top: 1px solid $grey-179
+            border-top: 1px solid $white
 
     @media screen and (max-width: $tabletSM)
         &__action
@@ -524,9 +524,8 @@
             display: none
 
     &__watch-more
-        display: flex
-        grid-gap: 10px
-        justify-content: space-between
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
         box-sizing: border-box
         color: $white !important
         width: 100%
@@ -536,6 +535,10 @@
         letter-spacing: 0.04em
         padding: 20px
         cursor: pointer
+        @media screen and (max-width: $tabletS)
+            display: flex
+            gap: 30px
+            align-items: center
 
         span
             display: block
@@ -543,9 +546,15 @@
         .watch-more__title
             place-self: center
 
+        svg
+            place-self: end
+            @media screen and (max-width: $tabletS)
+                max-width: 70px
+
 
 .autoauction-online
     overflow: hidden
+
     & .auction
         &s__model
             color: $black-21

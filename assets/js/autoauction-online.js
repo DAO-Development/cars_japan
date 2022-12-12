@@ -21,7 +21,7 @@ $(document).ready(function () {
     $('.filter__num-body').addClass('not-visible')
     $('.filter__rating').addClass('not-visible')
     if ($(window).width() < '1024') {
-        $('.filter__price').addClass('not-visible')
+        // $('.filter__price').addClass('not-visible')
         $('.filter__year').addClass('not-visible')
         $('.filter__rating').addClass('not-visible')
     }
@@ -109,7 +109,7 @@ $(document).ready(function () {
             $('.filter__num-body').removeClass('not-visible')
             $('.filter__rating').removeClass('not-visible')
             if ($(window).width() < '1024') {
-                $('.filter__price').removeClass('not-visible')
+                // $('.filter__price').removeClass('not-visible')
                 $('.filter__year').removeClass('not-visible')
                 $('.filter__rating').removeClass('not-visible')
             }
@@ -128,7 +128,7 @@ $(document).ready(function () {
             $('.filter__num-body').addClass('not-visible')
             $('.filter__rating').addClass('not-visible')
             if ($(window).width() < '1024') {
-                $('.filter__price').addClass('not-visible')
+                // $('.filter__price').addClass('not-visible')
                 $('.filter__year').addClass('not-visible')
                 $('.filter__rating').addClass('not-visible')
             }
@@ -178,7 +178,7 @@ $(document).ready(function () {
     var slider = document.getElementById('rating');
 
     noUiSlider.create(slider, {
-        start: [3, 9],
+        start: [3.00, 9.00],
         step: 1,
         connect: true,
         range: {
