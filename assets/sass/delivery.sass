@@ -9,9 +9,15 @@
 
     & .back
         position: absolute
+        z-index: 0
+        top: 0
+        left: 0
+
+    & .back2
+        position: absolute
+        z-index: 0
         right: 0
         bottom: -122px
-        z-index: 0
 
     &__step
         margin-bottom: 60px
@@ -114,7 +120,8 @@
         cursor: pointer
 
     .table-wrapper
-        overflow: hidden
+        overflow-x: auto
         border-radius: 15px
         border: 2px solid $black
-//padding-bottom: 15px
+        background-color: $white
+        //padding-bottom: 15px

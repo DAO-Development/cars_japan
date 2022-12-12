@@ -98,8 +98,8 @@
         &.arrow2
             margin-left: -60px
             @media screen and (max-width: $desktopXS)
-                margin-top: -60px
-                margin-left: -80px
+                margin-top: -90px
+                margin-left: -110px
                 transform: skewY(-20deg)
 
         &.arrow3
@@ -122,6 +122,8 @@
             transform: skewY(-10deg)
             margin-top: -80px
             margin-left: -60px
+            @media screen and (max-width: $desktopXS)
+                margin-left: -110px
 
         &.arrow7
             @media screen and (max-width: $desktopXS)
@@ -134,7 +136,7 @@
             transform: scaleX(1.1) skewY(-10deg)
             @media screen and (max-width: $desktopXS)
                 margin-top: -80px
-                margin-left: -90px
+                margin-left: -110px
 
         &.arrow9
             margin-left: -30px
@@ -148,8 +150,8 @@
             display: none
 
     &__step
-        padding: 24px
-        display: grid
+        padding: 24px 0
+        display: flex
         grid-template-columns: 1fr 1fr
         gap: 30px
         align-items: center
@@ -197,10 +199,14 @@
         @media screen and (max-width: $desktopXS)
             grid-template-columns: 90px 1fr
         @media screen and (max-width: $tabletM)
+            display: grid
             margin: 0 !important
             grid-column: auto !important
             grid-row: auto !important
             place-self: auto !important
+        @media screen and (max-width: $tabletS)
+            align-items: flex-start
+            margin-bottom: 15px !important
         @media screen and (max-width: $mobileM)
             grid-template-columns: 60px 1fr
             gap: 15px

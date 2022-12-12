@@ -104,12 +104,18 @@
 
             &::-moz-placeholder
                 color: $white
+                opacity: 1
 
             &:-moz-placeholder
                 color: $white
+                opacity: 1
 
             &::-webkit-input-placeholder
                 color: $white
+                opacity: 1
+
+            &:focus-visible
+                outline: none
 
             @media screen and (max-width: $mobileM)
                 width: 300px

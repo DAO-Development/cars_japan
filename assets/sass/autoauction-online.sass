@@ -36,6 +36,9 @@ img
             font-size: 17px !important
             line-height: 17px !important
 
+    .choices__list--dropdown
+        z-index: 10
+
     #main-filter__select
         &:focus-visible
             outline: none
@@ -426,6 +429,7 @@ img
                     padding: 12px 40px
                     font-size: 22px
                     line-height: 25px
+                    margin-bottom: 10px
 
             &__rating
                 width: 100%
@@ -565,7 +569,6 @@ img
 
                         & + label
                             display: block
-                            border: 1px solid $grey-229
                             border-radius: 50%
                             @media screen and (min-width: 0)
                                 width: 32px
@@ -780,22 +783,30 @@ img
             background: none
             margin-bottom: 0
             border: none
-            font-size: 24px
             line-height: 29px
             color: $white
             font-family: Montserrat, sans-serif
+            display: flex
+            align-items: center
             @media screen and (min-width: 0)
                 display: block
                 margin: 10px auto
+                font-size: 18px
             @media screen and (min-width: $tabletS)
                 margin: 15px auto
+                font-size: 20px
             @media screen and (min-width: $desktopS)
                 margin: 20px 0
+                font-size: 24px
 
 
             & > svg
                 margin-left: 20px
                 transform: rotate(180deg)
+                @media screen and (max-width: $desktopS)
+                    width: 20px
+                @media screen and (max-width: $tabletS)
+                    width: 18px
 
                 &.closed
                     transform: none
@@ -982,6 +993,8 @@ img
 .autoauction-online
     overflow: hidden
     padding-top: 83px
+    @media screen and (max-width: $desktopS)
+        padding-top: 0
 
     .page-title
         @media screen and (max-width: $mobileL)
@@ -1009,6 +1022,10 @@ img
                 &__inner
                     background-color: $orange
                     color: $white
+                    border-radius: 10px
+
+                &__list--dropdown
+                    z-index: 10
 
                 &[data-type*=select-one]::after
                     border-top-color: $white
@@ -1032,6 +1049,11 @@ img
 
             & .auctions
                 align-items: center
+
+                &__content
+                    border-color: $blue
+                    *
+                        border-color: $blue
 
         &s__info
             &-wrap

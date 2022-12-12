@@ -1,7 +1,15 @@
 .about-company
     padding-top: 83px
+    @media screen and (max-width: $desktopS)
+        padding-top: 0
 
     & > .contacts__banner
+        img
+            border-radius: 20px
+            @media screen and (max-width: $tabletSM)
+                border-radius: 10px
+
+
         @media screen and (min-width: $desktopS)
             margin-top: 60px
 
@@ -78,11 +86,9 @@
         & > .container
             width: 100vw
     @media screen and (min-width: $desktopS)
-        padding: 100px 0
         & > .container
             width: 1200px
     @media screen and (min-width: $desktopM)
-        padding: 120px 0
         & > .container
             width: 1345px
 
@@ -111,13 +117,14 @@
             margin-left: 56px
         @media screen and (min-width: $desktopS)
             margin-left: 0
+            padding-bottom: 75px
 
     & .arrow
         display: flex
         align-items: center
         cursor: pointer
         position: absolute
-        bottom: -50px
+        bottom: -15px
         margin: 0
 
         img
@@ -133,7 +140,12 @@
         position: absolute
         right: 20px
 
+    & .slide
+        width: fit-content
+
     &__card
+        width: fit-content
+
         & > h3
             color: $white
             font-family: "Montserrat Alternates", sans-serif

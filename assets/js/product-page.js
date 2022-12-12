@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $('.product__slider').slick({
         slidesToShow: 2,
-        variableWidth: false,
+        slidesToScroll: 1,
         prevArrow: '<div class="arrow arrow-prev"><img src="assets/img/product-page/prev.svg" alt="prev"></div>',
         nextArrow: '<div class="arrow arrow-next"><img src="assets/img/product-page/next.svg" alt="next"></div>',
         dots: false,
