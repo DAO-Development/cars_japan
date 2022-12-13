@@ -86,16 +86,16 @@ body *
     max-width: 96vw
     width: 1345px
 
-    @media screen and (max-width: $mobileM)
-        width: 84.5vw
-    @media screen and (max-width: $mobileL)
-        width: 86vw
-    @media screen and (max-width: $tabletS)
-        width: 85.8vw
-    @media screen and (max-width: $tabletM)
-        width: 88.62vw
     @media screen and (max-width: $desktopS)
         width: 1200px
+    @media screen and (max-width: $tabletM)
+        width: 88.62vw
+    @media screen and (max-width: $tabletS)
+        width: 85.8vw
+    @media screen and (max-width: $mobileL)
+        width: 86vw
+    @media screen and (max-width: $mobileM)
+        width: 84.5vw
 
 *
     box-sizing: border-box
@@ -193,6 +193,7 @@ input
     letter-spacing: 0.04rem
 
 a
+    cursor: pointer
     text-decoration: none
 
     &:hover

@@ -157,8 +157,25 @@
         align-items: center
         position: relative
         height: fit-content
+        @media screen and (max-width: $desktopS)
+            grid-template-columns: 127px 250px
+        @media screen and (max-width: $desktopXS)
+            grid-template-columns: 90px 1fr
+        @media screen and (max-width: $tabletM)
+            display: grid
+            margin: 0 !important
+            grid-column: auto !important
+            grid-row: auto !important
+            place-self: auto !important
         @media screen and (max-width: $tabletSM)
             padding: 0
+        @media screen and (max-width: $tabletS)
+            align-items: flex-start
+            margin-bottom: 15px !important
+        @media screen and (max-width: $mobileL)
+            display: flex
+            align-items: flex-start
+            gap: 15px
 
         &:nth-child(4n+1)
             grid-column: 1/2
@@ -194,22 +211,6 @@
             grid-row: 10/11
             margin-top: -85px
 
-        @media screen and (max-width: $desktopS)
-            grid-template-columns: 127px 250px
-        @media screen and (max-width: $desktopXS)
-            grid-template-columns: 90px 1fr
-        @media screen and (max-width: $tabletM)
-            display: grid
-            margin: 0 !important
-            grid-column: auto !important
-            grid-row: auto !important
-            place-self: auto !important
-        @media screen and (max-width: $tabletS)
-            align-items: flex-start
-            margin-bottom: 15px !important
-        @media screen and (max-width: $mobileM)
-            grid-template-columns: 60px 1fr
-            gap: 15px
 
         h4
             font-size: 20px
@@ -250,11 +251,16 @@
             width: 80px
             font-size: 40px
             border: 5px solid $orange
-        @media screen and (max-width: $mobileM)
+        @media screen and (max-width: $tabletSM)
             height: 60px
             width: 60px
             font-size: 32px
             border: 3px solid $orange
+        @media screen and (max-width: $mobileL)
+            border: none
+            width: fit-content
+            height: fit-content
+            font-size: 25px
 
     &__content
         width: 384px

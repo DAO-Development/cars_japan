@@ -19,11 +19,11 @@ img
     width: 100%
 
 .main-filter
-    margin: 75px 0 190px
+    margin: 75px 0
     @media screen and (max-width: $desktopS)
-        margin: 50px 0 100px
+        margin: 50px 0
     @media screen and (max-width: $mobileL)
-        margin: 20px 0 50px
+        margin: 20px 0
 
     .choices__inner
         padding-left: 0 !important
@@ -44,8 +44,6 @@ img
             outline: none
 
     &__category
-        // border: 1px solid $grey-153
-
         width: inherit
         display: grid
         padding: 12px 0 15px !important
@@ -274,7 +272,6 @@ img
         background-color: $orange
         color: $white
         padding: 10px
-        border-radius: 15px
 
         @media screen and (min-width: 0)
             display: none
@@ -289,18 +286,8 @@ img
                 &::-moz-placeholder
                     color: $white
 
-        @media screen and (min-width: $tabletM)
-            display: block
-            box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2)
-            margin-bottom: 50px
-            width: 100%
-
-        @media screen and (max-width: $tabletM)
+        @media screen and (min-width: 0)
             min-height: 100vh
-
-        @media screen and (max-width: $tabletSM)
-            & > h2
-                display: none
 
         @media screen and (min-width: $tabletS)
             input[type="text"], input[type="date"]
@@ -317,10 +304,21 @@ img
                 &::-moz-placeholder
                     color: $white
 
+        @media screen and (min-width: $tabletM)
+            display: block
+            box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2)
+            margin-bottom: 50px
+            width: 100%
+            min-height: unset
+            border-radius: 15px
 
         @media screen and (min-width: 1250px)
             display: grid
             grid-template-columns: 2fr 0.5fr
+
+        @media screen and (max-width: $tabletSM)
+            & > h2
+                display: none
 
         & .h2
             font-size: 32px
@@ -433,10 +431,6 @@ img
 
             &__rating
                 width: 100%
-                @media screen and (min-width: 0)
-                    border-bottom: 1px solid rgba(21, 2, 2, 0.06)
-                @media screen and (min-width: $tabletS)
-                    border-bottom: none
 
                 .h3
                     margin-top: 15px
@@ -461,23 +455,26 @@ img
                     height: 5px
 
                 .noUi-connect
-                    background: $blue
-                //left: 5px
+                    background: $white
+                    left: 5px
 
                 .noUi-handle
                     height: 15px
                     width: 15px
                     // border-radius: 50%
-                    background: $blue
+                    background: $white
                     border: none
                     box-shadow: none
 
                     &::before, &::after
                         display: none
 
-                //.noUi-connect,
-                //.noUi-origin
-                    margin-right: 10px
+                .noUi-target
+                    border: none
+
+                .noUi-connect,
+                .noUi-origin
+                    right: 10px
 
                 &__content
                     display: flex
@@ -529,11 +526,6 @@ img
                             line-height: 14px
 
             &__color
-                @media screen and (min-width: 0)
-                    border-bottom: 1px solid rgba(21, 2, 2, 0.06)
-                @media screen and (min-width: $tabletS)
-                    border-bottom: none
-
                 &__content
                     display: flex
                     flex-wrap: wrap
@@ -808,11 +800,25 @@ img
                 @media screen and (max-width: $tabletS)
                     width: 18px
 
-                &.closed
+            & .btn-open
+                display: inline-block
+
+            & .btn-close
+                display: none
+
+            &.closed
+                & .btn-open
+                    display: none
+
+                & .btn-close
+                    display: inline-block
+
+                & > svg
                     transform: none
 
         & .choices__list--dropdown
             color: $black !important
+            border-radius: 0 0 10px 10px
 
         & .choices__input
             color: $black !important
@@ -1052,6 +1058,7 @@ img
 
                 &__content
                     border-color: $blue
+
                     *
                         border-color: $blue
 

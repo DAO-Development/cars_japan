@@ -50,24 +50,24 @@ $(document).ready(function () {
     // };
     let tabs = $('.main-filter__category')
 
-    $('#main-filter__select option').each((i, el) => {
-        $(el).val(i)
-    })
-    console.log($('#main-filter__select option'))
-    let select_filter = new Choices($('#main-filter__select')[0], {
-        placeholder: true,
-        searchEnabled: false,
-        shouldSort: false
-    })
+    // $('#main-filter__select option').each((i, el) => {
+    //     $(el).val(i)
+    // })
+    // console.log($('#main-filter__select option'))
+    // let select_filter = new Choices($('#main-filter__select')[0], {
+    //     placeholder: true,
+    //     searchEnabled: false,
+    //     shouldSort: false
+    // })
 
-    select_filter.passedElement.element.addEventListener('change', function (event) {
-        selectedList.classList.remove("active")
-        selectedList = lists[event.detail.value]
-        selectedList.classList.add("active")
-
-        tabs.removeClass('active')
-        $('.main-filter__category[data-num=' + event.detail.value + ']').addClass('active')
-    })
+    // select_filter.passedElement.element.addEventListener('change', function (event) {
+    //     selectedList.classList.remove("active")
+    //     selectedList = lists[event.detail.value]
+    //     selectedList.classList.add("active")
+    //
+    //     tabs.removeClass('active')
+    //     $('.main-filter__category[data-num=' + event.detail.value + ']').addClass('active')
+    // })
 
     tabs.each((i, el) => {
         console.log(el)
@@ -94,7 +94,7 @@ $(document).ready(function () {
         window.scrollTo(0, 0);
     });
     $('.all-btn').on("click", function () {
-        let btn = document.querySelector('.all-btn-svg')
+        let btn = document.querySelector('.btn.all-btn')
         if (btn.classList.contains('closed')) {
             btn.classList.remove('closed')
             $('.filter__color').removeClass('not-visible')
@@ -172,9 +172,6 @@ $(document).ready(function () {
     })
 
 
-
-
-
     var slider = document.getElementById('rating');
 
     noUiSlider.create(slider, {
@@ -186,8 +183,6 @@ $(document).ready(function () {
             'max': 9
         }
     });
-
-
 
 
     slider.noUiSlider.on('update', function (values) {
@@ -210,104 +205,11 @@ $(document).ready(function () {
             $('.main-filter__mods-show').removeClass('active')
             $('.main-filter__mods-list').removeClass('active')
             active_list = false
-        }
-        else {
+        } else {
 
             $('.main-filter__mods-show').addClass('active')
             $('.main-filter__mods-list').addClass('active')
             active_list = true
         }
     })
-
-
-
-    const ctx = document.getElementById('myChart').getContext('2d');
-    const DATA_COUNT = 7;
-    const NUMBER_CFG = {count: DATA_COUNT, min: -100, max: 100};
-
-    const labels = ['1-10 Apr', '10-20 Apr', '20-30 Apr', '1-10 May', '10-20 May', '20-31 May'];
-    const data = {
-    labels: labels,
-    datasets: [
-        {
-            label: 'Цена в йенах',
-            data: [1,2,3,4,4,3],
-            borderColor: 'rgba(60, 225, 126, 1)',
-            backgroundColor: 'rgba(60, 225, 126, 1)',
-            yAxisID: 'y',
-        },
-        {
-            label: 'Цена в рублях',
-            data: [7, 7, 2, 3, 3,5],
-            borderColor: 'rgba(60, 126, 225, 1)',
-            backgroundColor: 'rgba(60, 126, 225, 1)',
-            yAxisID: 'y1',
-        },
-        {
-            type: 'bar',
-            label: 'Количество объявлений',
-            data: [9, 3, 2, 1,9,6],
-            // borderColor: Utils.CHART_COLORS.blue,
-            backgroundColor: 'rgba(188, 0, 45, .7)',
-
-            yAxisID: 'y2',
-        }
-
-    ]
-    };
-
-    let ratio = window.innerWidth / window.innerHeight * 1.2;
-    const myChart = new Chart(ctx, {
-        type: 'line',
-        data: data,
-        options: {
-            aspectRatio: ratio,
-            responsive: true,
-            interaction: {
-                mode: 'index',
-                intersect: false,
-            },
-            stacked: false,
-            plugins: {
-                title: {
-                    display: true,
-                    text: 'Статистика продаж по аукционам Honda за 6 месяцев'
-                }
-            },
-            scales: {
-                y: {
-                    type: 'linear',
-                    display: true,
-                    position: 'left',
-                },
-                y1: {
-                    type: 'linear',
-                    display: true,
-                    position: 'right',
-
-                    // grid line settings
-                    grid: {
-                        drawOnChartArea: false, // only want the grid lines for one axis to show up
-                    },
-                },
-
-                y2: {
-                    type: 'linear',
-                    display: false,
-                    position: 'right',
-
-                    // grid line settings
-                    grid: {
-                        drawOnChartArea: false, // only want the grid lines for one axis to show up
-                    },
-                }
-            }
-        },
-    });
-
-
-
-
-
-
 });
